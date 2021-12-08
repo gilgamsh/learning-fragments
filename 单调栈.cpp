@@ -1,9 +1,9 @@
 /*
  * @Author: your name
  * @Date: 2021-12-08 23:50:12
- * @LastEditTime: 2021-12-08 23:50:56
- * @LastEditors: your name
- * @Description: 对于一些有序的数，找到其之后第一个比它大的数
+ * @LastEditTime: 2021-12-08 23:53:31
+ * @LastEditors: Please set LastEditors
+ * @Description: 对于一些有序的数，找到其之后第一个比它大的数 数组中的数按序进栈 如果被更新则出战 保证制备跟新一次
  * @FilePath: \Githubrespositry\gitlab\learning-fragments\单调栈.cpp
  */
 #include <bits/stdc++.h>
