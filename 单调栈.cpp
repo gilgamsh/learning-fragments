@@ -1,10 +1,10 @@
 /*
  * @Author: your name
  * @Date: 2021-12-08 23:50:12
- * @LastEditTime: 2021-12-08 23:53:31
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-02-15 01:00:00
+ * @LastEditors: Juan Jiang
  * @Description: 对于一些有序的数，找到其之后第一个比它大的数 数组中的数按序进栈 如果被更新则出战 保证制备跟新一次
- * @FilePath: \Githubrespositry\gitlab\learning-fragments\单调栈.cpp
+ * @FilePath: \learning-fragments\单调栈.cpp
  */
 #include <bits/stdc++.h>
 using namespace std;
