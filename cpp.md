@@ -20,7 +20,7 @@ atoi()的参数是 const char* ,因此对于一个字符串str我们必须调用
 ```
 cin读入时会忽略换号和空格 制表符 但是不会删掉读入数据后面的那个换行符
 getchar可以读掉换行符
-getline会读取知道换行符  并把换行符删掉
+getline会读取直到换行符  并把换行符删掉
 ```
 
 
@@ -95,6 +95,15 @@ arctan用atan
 string s;
 getline(cin, s);
 cout << s << endl;//读入一整行的数据
+
+char fgets ( char* str, int size, FILE* stream)*
+*str: 字符型指针，用来存储所得数据的地址。字符数组。
+size: 整型数据，要复制到str中的字符串的长度，包含终止NULL。
+*stream:文件结构体指针，将要读取的文件流。
+意义：从stream所指向的文件中读取size-1个字符送入字符串数组str中。
+
+char str[N];
+fgets(str,N,stdin)
 ```
 
 ##### define
@@ -107,6 +116,40 @@ cout << s << endl;//读入一整行的数据
 
 
 #### string
+
+##### substr
+
+主要是pos <=size 但是可以等于 相当于越界了 但是这样可以取到空串
+
+```c++
+std::string a = "0123456789abcdefghij";
+ 
+    // count is npos, returns [pos, size())
+    std::string sub1 = a.substr(10);
+    std::cout << sub1 << '\n';
+ 
+    // both pos and pos+count are within bounds, returns [pos, pos+count)
+    std::string sub2 = a.substr(5, 3);
+    std::cout << sub2 << '\n';
+ 
+    // pos is within bounds, pos+count is not, returns [pos, size()) 
+    std::string sub4 = a.substr(a.size()-3, 50);
+    // this is effectively equivalent to
+    // std::string sub4 = a.substr(17, 3);
+    // since a.size() == 20, pos == a.size()-3 == 17, and a.size()-pos == 3
+ 
+    std::cout << sub4 << '\n';
+ 
+    try {
+        // pos is out of bounds, throws
+        std::string sub5 = a.substr(a.size()+3, 50);
+        std::cout << sub5 << '\n';
+    } catch(const std::out_of_range& e) {
+        std::cout << "pos exceeds string size\n";
+    }
+```
+
+
 
 ##### stringstream
 
