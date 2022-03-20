@@ -149,13 +149,20 @@ std::string a = "0123456789abcdefghij";
     }
 ```
 
+##### sscanf sprintf
+
+```c++
+int sscanf(const char *str, const char *format, ...)
+sprintf
+```
+
 
 
 ##### stringstream
 
 ```c++
 string s;//注意这个时候不能ios::sync_with_stdio(false)
-getline(cin, s);//读入一整行
+getline(cin, s);//读入一整行 没有回车
 stringstream ssin(s);  //用字符流处理s
 vector<string> str;
 while (ssin >> s) str.push_back(s);  //将每个字符串加入到str中
@@ -165,6 +172,20 @@ while (ssin >> s) str.push_back(s);  //将每个字符串加入到str中
 
 ```c++
 for (auto id = s.begin(); id != s.end(); id++)
+```
+
+```c++
+string to int 
+stoi(s)
+string to long long 
+stoll(s)
+string to fload
+stof(s)
+string to double
+stod(s)
+    char 数组
+atoi(str)  atof atoll 
+    tolower tou
 ```
 
 
