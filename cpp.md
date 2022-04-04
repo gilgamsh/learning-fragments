@@ -204,3 +204,31 @@ search(haystack.begin(), haystack.end(),//母串
        
 ```
 
+# Effective CPP
+
+左值 与 右值 
+
+左值引用 与 右值引用
+
+```c++
+//左值引用只能指向左值，不能指向右值
+int a=5;
+int &ref_a = a;//对
+int &ref_a = 5;//错
+const左值引用 可以指向右值 作为函数从形参
+void push_back (const value_type& val);
+```
+
+```c++
+//右值引用标志为&& 只能指向右值
+int &&ref_a_right = 5; // 对
+ 
+int a = 5;
+int &&ref_a_left = a; // 错
+ 
+ref_a_right = 6; // 右值引用的用途：可以修改右值
+```
+
+`std::move` **把左值强制转化为右值**   ***被声明出来* 的左、右值引用都是左值**
+
+**作为函数形参时，右值引用更灵活**
