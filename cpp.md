@@ -113,6 +113,13 @@ fgets(str,N,stdin)
 #define y second//用于p
 ```
 
+#### 数学
+
+```c++
+min({1,2,3})// 如果要多个值使用min的话 使用初始化列表的形式即可
+pow(base,exp)//全是浮点类型的
+```
+
 
 
 #### string
