@@ -1,3 +1,5 @@
+# Effective CPP
+
 ##### O2
 
 ```c++
@@ -22,8 +24,6 @@ cin读入时会忽略换号和空格 制表符 但是不会删掉读入数据后
 getchar可以读掉换行符
 getline会读取直到换行符  并把换行符删掉
 ```
-
-
 
 ##### puts
 
@@ -113,15 +113,6 @@ fgets(str,N,stdin)
 #define y second//用于p
 ```
 
-#### 数学
-
-```c++
-min({1,2,3})// 如果要多个值使用min的话 使用初始化列表的形式即可
-pow(base,exp)//全是浮点类型的
-```
-
-
-
 #### string
 
 ##### substr
@@ -163,8 +154,6 @@ int sscanf(const char *str, const char *format, ...)
 sprintf
 ```
 
-
-
 ##### stringstream
 
 ```c++
@@ -195,8 +184,6 @@ atoi(str)  atof atoll
     tolower tou
 ```
 
-
-
 ##### 查找子字符串
 
 ```c++
@@ -208,34 +195,5 @@ s.find("is", 5);//find
 
 search(haystack.begin(), haystack.end(),//母串
        std:boyer_moore_searcher(needle.begin(), needle.end());//needle是字串
-       
+   
 ```
-
-# Effective CPP
-
-左值 与 右值 
-
-左值引用 与 右值引用
-
-```c++
-//左值引用只能指向左值，不能指向右值
-int a=5;
-int &ref_a = a;//对
-int &ref_a = 5;//错
-const左值引用 可以指向右值 作为函数从形参
-void push_back (const value_type& val);
-```
-
-```c++
-//右值引用标志为&& 只能指向右值
-int &&ref_a_right = 5; // 对
- 
-int a = 5;
-int &&ref_a_left = a; // 错
- 
-ref_a_right = 6; // 右值引用的用途：可以修改右值
-```
-
-`std::move` **把左值强制转化为右值**   ***被声明出来* 的左、右值引用都是左值**
-
-**作为函数形参时，右值引用更灵活**
