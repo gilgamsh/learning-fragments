@@ -1,5 +1,8 @@
 {
     "workbench.editorAssociations": {
-        "*.md": "default"
+        "*.md": "default",
+        "*.ipynb": "jupyter-notebook",
+        "*.jpg": "cweijan.officeViewer",
+        "*.pdf": "default"
     }
 }
