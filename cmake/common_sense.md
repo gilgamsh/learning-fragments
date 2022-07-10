@@ -34,7 +34,7 @@ Vscode 的 **CMake Tools** 插件可以 Build Install Debug。总之就是很好
 
 ### 基础知识
 
-可以将命令看成是函数 
+可以将命令看成是函数
 
 ```cmake
 cmake_minimum_required(VERSION 3.0) # 设置CMake的最小版本
@@ -97,7 +97,7 @@ add_library(one STATIC two.cpp three.h) # 创建一个库 one 是静态库 STATI
 ```
 
 #### 为目标增加依赖
-    
+
 ```cmake
 target_include_directories(one PUBLIC include) # 为目标one 增加了一个依赖的目录
 
@@ -105,7 +105,7 @@ add_library(another STATIC another.cpp another.h)
 target_link_libraries(another PUBLIC one) # 为目标another 增加了一个依赖关系
 ```
 
-#### 小结1 
+#### 小结1
 
 ```cmake
 cmake_minimum_required(VERSION 3.8)
