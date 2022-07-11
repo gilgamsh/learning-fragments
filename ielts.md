@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-07-10 08:52:23
  * @LastEditors: Juan Jiang
- * @LastEditTime: 2022-07-10 16:07:25
+ * @LastEditTime: 2022-07-10 21:39:57
  * @FilePath: \learning-fragments\ielts.md
 -->
 
@@ -19,6 +19,17 @@
 ## Speak
 
 ### Part1
+
+Greeting Introduction 介绍名字 (不算在考试时间中，尽量简短) 
+My name is Jiang Jiaxi. And you can call me Jiaxi.
+I'am from NanTong,Jiangsu.
+
+（以下问题会问3-7个 每个回答尽量快一点 每一个不超过30s）
+问题集一 工作 学习 家乡 Home Culture Common in the Culture 
+
+freshman 大一 sophomore 大二 junior 大三 senior 大四
+
+问题集二 三 Hobbies Clothes Family Food Cinema Robots Flowers
 
 ### Part2
 
