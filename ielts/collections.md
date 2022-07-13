@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-07-11 22:59:18
  * @LastEditors: Juan Jiang
- * @LastEditTime: 2022-07-11 23:26:25
+ * @LastEditTime: 2022-07-12 17:51:13
  * @FilePath: \learning-fragments\ielts\collections.md
 -->
 #### housework
@@ -31,4 +31,11 @@ needy people 需要帮助的人
 fire/arouse the enthusiasm of 激发人们的热情 
 
 break the cycle of poverty 打破贫穷的循环
+
+#### Mountains
+
+snow capped mountains 雪山
+
+spectacular/magnificent mountains 壮丽的山峰
+
 

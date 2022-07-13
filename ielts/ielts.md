@@ -1,13 +1,30 @@
 <!--
  * @Date: 2022-07-10 08:52:23
  * @LastEditors: Juan Jiang
- * @LastEditTime: 2022-07-12 00:04:53
+ * @LastEditTime: 2022-07-13 10:48:31
  * @FilePath: \learning-fragments\ielts\ielts.md
 -->
 
 ## Listen
 
+A **dialogue** in work and social situations.
+A **monologue** in work and social situations.
+
+A **dialogue** in academic and educational situations.
+A **monologue** in academic situations.
+
+Read the instructions. Underline key words. Predict the information to fill.
+如果错过了，没法补救
+
 ### Section 1
+
+写听到的单词 猜词的类型
+
+### Section 2
+
+signal words  Let;s look first ,  The first thing ,Beyond that ,on the subject of , Now,before , This year
+
+synonyms 
 
 #### Telephone Number
 
@@ -15,6 +32,9 @@
 
 - if there is a double number, we say “double 7”
 - we don’t say the numbers one by one, rather we read them in groups of 2 or 3. So 13554684616 would be said “13-double 5 – 468-46-16”
+
+
+
 
 ## Speak
 
@@ -52,7 +72,7 @@ recharge my batteries.
 Which town or city do you come from?
 
 What's the best thing about living in your city? (or worst)
- 
+
 一些表示时间频率的词语，比如：once a week, often, rarely, never, every day, seldom, almost always etc.
 
 问题集二 三 Hobbies Clothes Family Food Cinema Robots Flowers
@@ -65,12 +85,38 @@ Do you often look at yourself in the mirror?Why?
 What's your favourite type of music?
 Do you think older and younger generations have different tastes?
 
-fillers : hmm,that's a good question. / I've never really thought about that before, but I'd say that / In my view / 
+fillers : hmm,that's a good question. / I've never really thought about that before, but I'd say that / In my view /
 Well, I'd have yo say that / Well, in my opinion, To tell the truth
 
 易错点 favourite 就好 不要加most 前缀  least favourite 最不喜欢
 
-
 ### Part2
 
-词伙
+Planning your short Talk
+
+Part 2  is related to a personal experience. 一定要说两分钟左右 make notes
+
+不必覆盖问题中的所有点
+
+Part2 中回答考官的问题 quite short
+
+Part3 和Part2是相关的
+
+可以适当的调整话题
+
+develop your ideas logically
+
+##### Plan
+
+除了描述 ，同时提供一些背景故事，额外的信息
+有逻辑，不要重复一个主题，语法与词汇
+Mind Map 3-6 headings Where When Who Why Feeling etc.
+
+每个heading大概讲20s左右
+
+1. Introduction (Today I'd like yo talk about xxx which is xxx. I chose to talk about xxx because xxx.) 
+2. Past (used to do, why  ) But first ,let me give you a bit more background on this trip. 
+3. Description (what happened) Anyway,  一般过去时   Just before we left
+4. Opinion (good or bad experience) In my opinion, 
+5. Future (would do it again) Finally,with regards to the future
+
