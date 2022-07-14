@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-07-10 08:52:23
  * @LastEditors: Juan Jiang
- * @LastEditTime: 2022-07-13 10:48:31
+ * @LastEditTime: 2022-07-13 21:19:39
  * @FilePath: \learning-fragments\ielts\ielts.md
 -->
 
@@ -25,6 +25,20 @@ Read the instructions. Underline key words. Predict the information to fill.
 signal words  Let;s look first ,  The first thing ,Beyond that ,on the subject of , Now,before , This year
 
 synonyms 
+
+### Section 3
+
+underline the key words in the question
+
+The thing about  表示 opinion
+
+所有选项都会说到 但是只有一个是对的
+
+Predict what type of word/infotmation form to fill in. 
+
+### Section 4
+
+看标题 predict the gap 
 
 #### Telephone Number
 
