@@ -1,0 +1,12 @@
+{
+  "base_url": "/",
+  "hostname": "0.0.0.0",
+  "notebook_dir": "/chisel-bootcamp",
+  "password": false,
+  "pid": 7,
+  "port": 8888,
+  "secure": false,
+  "sock": "",
+  "token": "9c82b743c416f715a59b64d4e8ec4916ffec99f62c98fb5b",
+  "url": "http://0.0.0.0:8888/"
+}

@@ -1,0 +1,148 @@
+{
+	/*======================  护眼主题——浅蓝 ========================= 
+	*/
+	"$schema": "vscode://schemas/color-theme",
+	"name": "浅蓝色界面主题",
+	"type": "light",
+	"include": "./1浅色-语法配色.json",                        //引用自定义语法配色
+
+	"colors":{ 
+		/*
+			窗体色彩
+			90bac0(菜单+)       00a1b9(强烈分割线+)      DDDFE2(窗体) dddddd     
+			EEEEEE(代码背景)     9ababe79(选中词+)       999999(行号)
+			fff453(匹配词)      970272(错误)            2193f0(标记)
+		*/
+		
+		//1 悬浮控件背景=============================================
+		"menu.background":"#DDDFE2",                     //悬浮菜单背景色   ------菜单栏
+		"menu.foreground":"#000000",                     //悬浮菜单前景色 
+		"editorHoverWidget.background": "#DDDFE2",       //悬浮控件背景  ----编辑区
+		"editorSuggestWidget.background": "#DDDFE2",
+		"editorHoverWidget.foreground": "#000000",
+		"editorHoverWidget.border": "#00a1b9",           //悬浮控件边框   
+		"editorSuggestWidget.border": "#00a1b9",         //悬浮建议边框
+		"list.highlightForeground": "#003ec4",           //匹配字体颜色   ---编辑区，输入提示
+	    //配置弹出的下拉菜单 和 左侧资源管理器栏里菜单
+		"list.activeSelectionBackground":"#90bac0c5",      //左侧 资源管理器栏里
+	    "list.activeSelectionForeground": "#000000",
+		"list.inactiveSelectionBackground": "#90bac060", //未激活菜单背景
+		"list.inactiveSelectionForeground": "#000000",
+		"list.errorForeground": "#970272",               //出现错误	 
+        "list.inactiveFocusBackground": "#90bac0c5",
+
+
+		"list.hoverBackground": "#90bac042",             //鼠标移动背景色   ----面包屑栏下拉菜单
+		"list.focusBackground": "#90bac069",             //聚焦背景色
+		
+		"focusBorder": "#90bac098",                      // 窗口聚焦时边框
+		
+		//2 全局边框 =============================================== 
+		"window.activeBorder": "#00a1b9",                //全局边框-------------
+
+		//3 菜单栏 标签栏 面包屑栏 ======================================
+		"titleBar.activeForeground": "#000000",
+		"titleBar.activeBackground": "#90bac0",          //最顶菜单背景
+		"titleBar.inactiveBackground": "#90bac0",
+	    
+		"tab.hoverBorder": "#00a1b9",
+		"tab.hoverBackground": "#90bac062",              // 标签鼠标悬停时颜色
+		"tab.hoverForeground": "#000000",
+		"tab.inactiveBackground":"#DDDFE2",              // 非活动的标签颜色
+		"tab.inactiveForeground": "#000000",
+	    "tab.activeBackground":"#90bac062",              //活动标签背景色
+		"tab.activeForeground": "#000000",               //激活的 字体 前景色
+		"tab.border": "#90bac0",                         // 标签两边竖线---------
+		"editorGroupHeader.tabsBackground": "#DDDFE2",   // 非活动右侧便签颜色
+		//3.5 面包屑栏
+		"breadcrumb.background": "#DDDFE2",              //面包屑栏背景
+		"breadcrumb.foreground":"#000000",               //面包屑栏
+		"breadcrumbPicker.background":"#DDDFE2",         //下拉背景色
+
+		"editorGroupHeader.border": "#00a1b9",           //标签栏和编辑区分割线  分割线-------
+		"scrollbar.shadow": "#90bac0",                   //上面分割线的阴影
+		"editorGroup.dropBackground": "#90bac041",       //拖动界面  分屏颜色多屏
+
+		//4 编辑区=================================================
+		"editor.foreground":"#000000",                     //前景色
+		"editor.background":"#EEEEEE",                     //编辑区背景色 
+	//	"editor.lineHighlightBackground": "#E4E4E4",       //高亮行    ---- 当前行----===================
+		"editor.lineHighlightBorder": "#dddddd",           //高亮行边框 ———— 当前行背景-----
+		"editor.selectionBackground": "#53ff5371",         //选中词颜色 ———— 选区 —————
+		"editor.findMatchBackground": "#53ff5371",           //当前选中的搜索词的颜色
+		"editor.hoverHighlightBackground":"#53c0ff60",       //鼠标在单词上方时
+		"editor.selectionHighlightBackground": "#fff453b6",  //相同匹配词的颜色
+		"editor.inactiveSelectionBackground":"#fff453b6",    //窗口失去焦点，选中的颜色
+		"editorCursor.foreground": "#000000",              //光标颜色
+		"editor.findMatchHighlightBackground": "#fff453",  //相同匹配词的颜色
+		"editorBracketMatch.background":"#fff453",         //括号背景
+		"editorUnicodeHighlight.border": "#ff0000",        //中英符号错用高亮边框
+
+		"editor.wordHighlightBackground": "#53c0ff28",     //未选中时背景色
+		//4.5 行号所在区域
+		"editorLineNumber.foreground": "#999999b0",        //行号颜色
+		"editorLineNumber.activeForeground": "#000000",    //活动行号突出显示
+		"editorGutter.background": "#DDDFE2",              //行号背景
+		"editorGutter.modifiedBackground": "#90bac0",      //行号右边的 内容标记
+		"editorIndentGuide.background":"#99999960",        //缩进线颜色非激活------
+		"editorIndentGuide.activeBackground":"#999999",    //当前激活的缩进线------
+		"debugIcon.breakpointForeground":"#2193f0",        //断点标记
+		"editorGutter.foldingControlForeground": "#000000",//折叠标记
+		"editor.foldBackground": "#90bac03d",              //折叠后的背景
+
+		"diffEditor.border": "#00a1b9",                    // 多个编辑器的分割线 ----------
+
+        //5 最左侧栏 +  活动栏资源管理器栏================================
+		"activityBar.background": "#DDDFE2",              //最左活动栏
+		"activityBar.foreground": "#00a1b9",              //最左活动栏图标颜色
+		"activityBarBadge.background":"#2193f0",          //最左活动栏 通知标记 颜色
+		"activityBarBadge.foreground": "#ffffff",
+		"badge.background": "#2193f09d",                  //侧边栏上 标记为保存 小圆球
+		"badge.foreground":"#ffffff",                     //小圆球中数字
+		"activityBar.border": "#99999960",                //边框 分割线--------------
+      
+		//5.5 活动栏资源管理栏
+		"sideBarTitle.foreground": "#000000",             //管理 最上面的标题颜色 
+		"sideBar.background": "#DDDFE2",                  //最左侧边栏 展开背景
+		"sideBar.foreground": "#000000",                  //活动栏 字体颜色
+		"sideBar.border": "#99999960",                    //活动栏 边框分割线---------------
+        "sideBarSectionHeader.background": "#DDDFE2",     //活动栏 分类条的背景
+
+		//6 右侧缩略图滑块===============================================
+		"minimap.background": "#DDDFE2",                   //缩略图背景
+		"minimapSlider.activeBackground": "#90bac0af",     //点击激活滑块颜色
+		"minimapSlider.hoverBackground": "#90bac0ab",
+		"minimapSlider.background": "#90bac070",            
+		"minimap.selectionHighlight": "#00728f",           //当前行标记 
+ 
+		//7 最右侧上下滑动块==============================================
+		"scrollbarSlider.background": "#90bac000",          //滑块颜色
+		"scrollbarSlider.hoverBackground": "#90bac09c",  
+		"scrollbarSlider.activeBackground": "#90bac0e3",    //点击滑块激活颜色
+		//7.5  上下滑块的底部
+		"editorOverviewRuler.background": "#DDDFE2",        //滑块条背景
+		"editorOverviewRuler.selectionHighlightForeground": "#90bac09f",   //选中词
+		"editorOverviewRuler.findMatchForeground": "#fff4539d",              //搜索词
+		"editorOverviewRuler.currentContentForeground": "#0423c086",
+		 
+		//8 最底部栏   状态栏=======================================
+		"statusBar.noFolderBackground" : "#90bac0",   //单文件状态栏
+		"statusBar.background": "#90bac0",            //最底状态栏颜色
+		"statusBar.foreground": "#000000",            //最底状态栏前景颜色
+		"statusBar.border": "#90bac0",                //底部状态栏分割线--------
+		
+		//9 下方终端 输出 控制台栏
+		"panel.background": "#DDDFE2",                //最底部控制台
+		"panel.border": "#00a1b9",                    //控制台边框
+		"panelTitle.activeBorder": "#00a1b9",         //标题下划线颜色
+
+		"input.border": "#00a1b9",                    //输入窗口边框
+		"input.background": "#DDDFE2",                //输入窗口背景
+		"input.placeholderForeground": "#0000007e",   //输入框的悬浮字体
+
+		"dropdown.background": "#DDDFE2",             //底部终端选择框  右上角的那个
+		"dropdown.border": "#00a1b9"
+
+	},
+   
+}

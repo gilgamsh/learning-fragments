@@ -1,0 +1,460 @@
+{
+	/*======================  护眼主题——深色 ========================= 
+	*/
+	"$schema": "vscode://schemas/color-theme",
+	"name": "默认的语法色彩",
+	"semanticHighlighting":true,                  //开启语义着色
+    /*
+    下面都是语法色彩配置   一个最小化的主题只会定义 11 个根组中的 10 个样式（其中 meta 是不会有视觉样式的)
+    可自定义: -----> 修改后, 重启生效
+    */
+	"tokenColors": [
+
+		//1、关键字（当它无法被归并到别的组时使用）。
+		{
+			"scope": [
+				"keyword.control",                 //通常是流程控制关键字，如 continue、while、return 等。
+				"keyword.control.conditional",
+				"keyword.control.import",
+
+				"punctuation.definition.keyword",   // 带符号的关键字, such as the @ symbol in CSS, add the following scope to the symbols:
+ 
+				//运算符通常都是符号，根据运算符的类型引用特定的变体
+				"keyword.operator",                 // 文本（如 or）或者字符类型的操作符。
+				"keyword.operator.assignment",
+				"keyword.operator.arithmetic",
+				"keyword.operator.bitwise",
+				"keyword.operator.logical",      
+				"keyword.operator.word",            //操作者是一个字(and or not)
+				
+				"keyword.other",                    //其它关键字
+			 ],		  
+			"settings": {
+				"foreground": "#569cd6",          //关键字
+				"fontStyle": "italic",
+			}
+		},
+		
+		//2、 storage：与存储相关的内容。
+		{
+			"scope": [
+				"storage.type",              //类型，如 class、function、int、var 等。
+				"storage.modifier",          //存储相关的修饰符，static, inline, const, public and private.
+				"storage.type.function",     // func, function and def
+				
+				//Keywords for  classes, structs, interfaces
+				"storage.type.class",
+				"storage.type.struct", 
+				"storage.type.enum", 
+				"storage.type.union",
+				"storage.type.trait", 
+				"storage.type.interface",
+				"storage.type.impl ",
+				"storage.type keyword.declaration.type",
+			],
+			"settings": {
+				"foreground": "#569cd6",      //存储 类型的关键字 0f73df
+				"fontStyle": "",
+			}
+		},
+
+		//3、support：框架或者库提供的内容。 比如内置函数
+		{
+			"scope": [
+				"support",
+				"support.class",               // 框架或者库提供的类。
+				"support.constant",            //框架或者库提供的常量。
+				"support.function",            //框架或者库提供的函数，如 Objective-C 中的 NSLog 就应该是
+				"support.other",
+				"support.property-value",
+				"support.type",                //框架或者库提供的类型，有可能只在 C 系语言中使用，如 typedef 等。大多数其它语言都会被认为是类。
+				"support.variable",
+		             
+				"support.module",	
+
+				"support.class",           
+			],
+			"settings": {
+				"foreground": "#13c9badc",      //  函数名
+				"fontStyle": "bold underline",  //   bold
+			}
+		},
+		
+		// 4 、entity     实体，指文档中比较大坨的部分，如章节、类、函数或者标记。
+		//               我们并不讲所有的实体都归于 entity.*，有些会归于 meta.*。
+		{
+			"scope": [
+				//"entity.name",  //用于命名一个大实体。
+				"entity.name.class",
+				"entity.name.struct",
+				"entity.name.enum",
+				"entity.name.union",
+				"entity.name.trait",
+				"entity.name.interface",
+				"entity.name.impl",
+				"entity.name.type",				        //类型定义或者类。
+				
+				"entity.name.class.ford-decl",		    //在C和c++中使用	
+                "entity.other.inherited-class",         //超类/基类名称
+
+			//	"entity.name.function",			    	//函数实体
+				"entity.name.function.constructor",
+                "entity.name.function.destructor",
+			
+				"entity.name.namespace", 				 //命名空间，包和模块
+				"entity.name.constant",       		     //常数
+				"entity.name.label",					 //类似goto的构造的标签
+				
+		    
+				"entity.name.tag",					     // HTML and XML tags标记。
+				"entity.name.section",				     // 章节。 标记语言(如markdown)的标题名称
+			    "entity.other.attribute-name",           //  HTML, CSS and XML 
+	
+			  ],
+			"settings": {
+				"foreground": "#29beebda",               //自定义 变量  结构体  04b2dd
+				"fontStyle": "bold", //bold
+			}
+		},
+		{
+			"scope": [
+			//	"entity.name",  //用于命名一个大实体。
+		 		"entity.name.function",			    	//类中函数实体
+			  ],
+			"settings": {
+				"foreground": "#13c9badc",               //自定义 变量  结构体  05a3ca
+				"fontStyle": "bold underline",
+			}
+		},
+		//5、meta元作用域用于范围更大的代码或标记部分，通常包含多个更具体的范围数据结构的完整内容
+		//   These are not intended to be styled by a color scheme, but used by preferences and plugins.
+		//如声明函数的整行将是 meta.function，子集将是 storage.type、entity.name.function、variable.parameter 等，并且只有后者才会被样式化。
+		{
+			"scope": [
+				// "meta.class",
+				// "meta.struct",
+				// "meta.enum",
+				// "meta.union",
+				// "meta.trait",
+				// "meta.interface",
+				// "meta.impl",
+				// "meta.type",
+
+				// "meta.function",                       // 函数定义与声明的参数以及括号；宏定义代码段的参数及括号 
+				// "meta.function.parameters",
+				// "meta.function.return-type",
+
+				// "meta.namespace",
+				// "meta.preprocessor",                   // 预处理“#if”等的括号；宏定义的参数括号及代码段 
+		
+				// "meta.annotation",
+				// "meta.annotation.identifier",
+				// "meta.annotation.parameters",
+				// "punctuation.definition.annotation",
+
+				// "meta.path",  
+				
+				// "meta.function-call",                  //函数名称(包括完整路径)和所有参数
+
+				// "meta.block",                          //用{}描述的代码段使用以下范围，在{}内的字符使用另外的punctuation范围
+				// "punctuation.section.block.begin",
+				// "punctuation.section.block.end",
+				// "meta.braces",
+				// "punctuation.section.braces.begin",    // { and } 
+				// "punctuation.section.braces.end",
+
+				// "meta.group",
+				// "punctuation.section.group.begin",     //()
+				// "punctuation.section.group.end",
+				// "meta.parens",
+				// "punctuation.section.parens.begin",
+				// "punctuation.section.parens.end",
+
+				// "meta.brackets",
+				// "punctuation.section.brackets.begin",  //[ and ]
+				// "punctuation.section.brackets.end",
+
+				// "meta.generic",
+				// "punctuation.definition.generic.begin", // < and >
+				// "punctuation.definition.generic.end",
+	
+				// "meta.tag",                             //HTML and XML tags
+				// "meta.paragraph",                       //标记语言的段落 markup 
+			],
+			"settings": {
+				"foreground": "#D4D4D4",              // 参数的括号
+				"fontStyle": "",
+			}
+		},	
+	 
+
+		//  6、函数 变量 参数 variable
+		{
+			"scope": [		
+				"variable.other",                      //其它变量，如 $some_variables。
+				"variable.other.readwrite",            //let、var声明的变量的颜色
+
+				"punctuation.definition.variable",     //the $ in PHP and Shell.
+				"variable.other.constant",             //const声明的不可变变量的颜色
+				"variable.language",                   //语言保留变量，如 this、super、self 等。this、super等
+
+				"variable.parameter",                  //函数参数
+					
+				"variable.other.member",               //类或其他数据结构的字段，属性，成员
+				"variable.function",                   //函数和方法名称的作用域，但仅限于调用时	
+				"variable.annotation",                 //作为数值一部分的标识符中的最终标签
+				"punctuation.definition.annotation"
+			],
+			"settings": {
+				"foreground": "#D4D4D4",             //函数参数
+				"fontStyle": "",  //italic
+			}
+		},
+		{
+			"scope": [		
+				"variable.language",                   //语言保留变量，如 this、super、self 等。this、super等                
+			],
+			"settings": {
+				"foreground": "#D4D4D4",              
+				"fontStyle": "italic",  //italic
+			}
+		},
+		{
+			"scope": [	
+				"variable.other",                      //其它变量，如 $some_variables。
+				"variable.other.member",               //类或其他数据结构的字段，属性，成员
+			
+			],
+			"settings": {
+				"foreground": "#13c9badc",             // 这个着色类 属性   
+				"fontStyle": "",  //italic 
+			}
+		},
+			
+		// 7、constant 各种形式的常数
+		{
+			"scope":[
+				"constant.numeric",                    //数字   e.g. 42, 1.3f, 0x4AB1U.
+				"constant.numeric.integer",
+				"constant.numeric.integer.binary",
+				"constant.numeric.integer.octal",
+				"constant.numeric.integer.decimal",
+				"constant.numeric.integer.hexadecimal",
+				"constant.numeric.integer.other",
+				"constant.numeric.float",
+				"constant.numeric.float.binary",
+				"constant.numeric.float.octal",
+				"constant.numeric.float.decimal",
+				"constant.numeric.float.hexadecimal",
+				"constant.numeric.float.other",
+				"constant.numeric.complex",
+				"constant.numeric.complex.real",
+				"constant.numeric.complex.imaginary",
+
+				"constant.languag",                   //true/false/null
+
+				"constant.character.escape",          //转义字符如\n和\x20    //匹配字符，e.g. &lt;, \e, \031.
+				
+				"constant.other.placeholder",         //格式化占位符 %s
+				"constant.other",                     //其他常量，如css中的颜色
+			],
+			"settings": {
+				"foreground": "#ce00ce",            //数字
+				"fontStyle": "",
+			}
+		},
+	
+		//8 、字符串
+		{
+			"scope": [
+				"string.quoted",                     //带引号的字符串
+				"string.quoted.single",  			 //单引号字符串，如 'foo'。
+				"string.quoted.double",              //双引号字符串，如 "foo"。
+				"string.quoted.triple",              //三引号字符串，如 """Python"""。
+				"string.quoted.other",               // 其它字符串，如 $'shell'、%s{...}。
+	
+				"meta.string",
+				"punctuation.definition.string.begin",
+				"punctuation.definition.string.end",
+
+				"string.quoted.unquoted",            //如未加引号 here-docs 和 here-strings。
+				"string.quoted.regexp",              //正则表达式。
+
+				"meta.interpolated",                 //需要被计算的字符串，如 反引号date反引号、$(pwd)。
+				"punctuation.section.interpolation.begin",
+				"punctuation.section.interpolation.end",
+				
+				"source.language-suffix.embedded",
+	
+			],
+			"settings": {
+				"foreground": "#ce9178",           //字符串 6c3455
+				"fontStyle": "",
+			}
+		},
+		
+		// 9、comment 注释
+		{
+			"scope": [
+					    "comment.line",	
+						"comment.block",                 //block：多行注释
+						"comment.block.documentation",   //多行注释    / … / and <!-- … -->
+
+						"punctuation.definition.comment",
+						"meta.toc-list",
+					],
+			"settings": {
+				"foreground": "#6A9955",               //注释
+				"fontStyle": "",
+				//斜体 "fontStyle": "italic",
+				//斜体下划线 "fontStyle": "italic underline",
+				//斜体粗体下划线 "fontStyle": "italic bold underline",
+			}
+		},
+
+		//10、 punctuation  括号之类
+		{
+			"scope": [    
+			//	"punctuation.separator",                 //,和:
+
+			//	"punctuation.terminator",                //;和其他语句终止符     分号（代码终止符） 
+			//	"punctuation.separator.continuation",    //行继续字符
+			//	"punctuation.accessor",                  //.
+
+			],
+			"settings": {
+				"foreground": "#D4D4D4",               // 符号 ， （） 等  颜色
+				"fontStyle": "",
+			}
+		},
+	
+		//11 invalid：非法内容
+		{
+			"scope": [
+				"invalid.illegal",                      //非法，如 HTML 中的 & 等（非实体 / tag 中的部分）。  
+				"invalid.deprecated",                   //过时内容，如使用了不推荐使用的 API 函数。
+			],
+			"settings": {
+				"foreground": "#e93636"
+			}
+		},
+
+	
+       // 12、markup 标记作用域用于内容，而不是代码(包括Markdown和Textile等语法)
+	   {
+		"scope": [
+			"markup.heading",   		                //章节头。（可选）为接下去的元素提供标题级别，如 HTML 中的
+			"markup.list.numbered",                 	//	有序列表项。
+			"markup.list.unnumbered",	                //	无序列表项。
+
+			"markup.bold",       		                //加粗文本。
+			"markup.italic",                            //斜体文本。
+			"markup.underline",    		                //带下划线
+
+			"markup.inserted",                          //插入
+			"markup.deleted",                           //删除
+
+			"markup.underline.link",	                //  用于超链接，为了方便起见，它是从 markup.underline 派生的，这的话即使没有专门针对 markup.underline.link 的主题规则，也能继承下划线样式。
+			"markup.quote",                             //逐字文本，如代码项。通常对于 markup.raw 是禁用拼写检查的。
+			
+			"markup.raw.inline",                        //逐字记录的文本
+			"markup.raw.block",
+
+			"markup.other",                             //其它标记结构。
+		],
+		"settings": {
+			"foreground": "#D4D4D4",
+			"fontStyle": "",
+		}
+		},
+		{
+			"scope": "markup.underline",
+			"settings": {
+				"fontStyle": "underline"
+			}
+		},
+		{
+			"scope": "markup.bold",
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#000080"
+			}
+		},
+		{
+			"scope": "markup.heading",
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#640101"
+			}
+		},
+		{
+			"scope": "markup.italic",
+			"settings": {
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"scope": "markup.inserted",
+			"settings": {
+				"foreground": "#098658"
+			}
+		},
+		{
+			"scope": "markup.deleted",
+			"settings": {
+				"foreground": "#a31515"
+			}
+		},
+		{
+			"scope": "markup.changed",
+			"settings": {
+				"foreground": "#0451a5"
+			}
+		},
+		{
+			"scope": "markup.inline.raw",
+			"settings": {
+				"foreground": "#800000"
+			}
+		},
+		{
+			"name": "brackets of XML/HTML tags",
+			"scope": "punctuation.definition.tag",
+			"settings": {
+				"foreground": "#800000"
+			}
+		},
+	
+	
+		// 13、source 应用于整个源代码文件
+		{
+			"scope": [
+				"source",
+			],
+			"settings": {
+				"foreground": "#d6d6d6",
+				"fontStyle": "",
+			}
+		},
+
+		//14、text
+		{
+			"name":"text",
+			"scope": [
+				"text.html",                        //html
+				"text.xml",                         //xml
+			],
+			"settings": {
+				"foreground": "#D4D4D4",
+				"fontStyle": "",
+			}
+		},
+	]
+
+    /*  "semanticTokenColors": {              
+		"newOperator": "#0000ff",
+		"stringLiteral": "#a31515",
+		"customLiteral": "#000000", 
+		"numberLiteral": "#098658",
+	},*/	
+}

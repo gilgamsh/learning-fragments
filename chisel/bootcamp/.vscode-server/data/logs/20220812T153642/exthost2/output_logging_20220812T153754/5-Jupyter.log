@@ -1,0 +1,15 @@
+Visual Studio Code (1.70.1, attached-container, desktop)
+Jupyter Extension Version: 2022.7.1102252217.
+Python Extension not installed.
+Workspace folder /
+info 15:42:14.653: ZMQ install verified.
+User belongs to experiment group 'jupyterTest'
+User belongs to experiment group 'jupyterEnhancedDataViewer'
+info 15:42:17.763: LSP Notebooks experiment is disabled -- not using Pylance
+info 15:45:19.202: Shutting down notebooks for b2ada1a1-df66-4d8d-9057-a6a5b1605af7
+info 15:45:19.203: Disposing HostJupyterExecution fe4846a5-abe3-4041-9725-d2593ad3bc87
+info 15:45:19.204: Disposing super HostJupyterExecution fe4846a5-abe3-4041-9725-d2593ad3bc87
+info 15:45:19.214: Disposing HostJupyterExecution fe4846a5-abe3-4041-9725-d2593ad3bc87
+info 15:45:19.214: Finished disposing HostJupyterExecution  fe4846a5-abe3-4041-9725-d2593ad3bc87
+info 15:45:19.250: Cleaning up server cache fe4846a5-abe3-4041-9725-d2593ad3bc87
+info 15:45:19.252: Finished disposing HostJupyterExecution  fe4846a5-abe3-4041-9725-d2593ad3bc87

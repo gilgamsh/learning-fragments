@@ -1,0 +1,708 @@
+
+/*
+<div>      <---- 子节点的外壳(用于布局的外壳)
+    子节点(子元素)
+</div> 
+
+div 仅仅是分区排布(大小 位置 层)， 没有显示实体，只是子节点外壳 ，它的属性 position: relative  是给子节点提供坐标定位的前提
+子节点有 position:absolute 属性后，其相对 div外壳 进行定位。 
+子节点通过 外壳的 div:hover 可用于触发子节点动画事件 (因为div一般是固定的，所以动画更稳定。否则可能会无限触发。)
+
+margin: 0 0 0 0; pading:0 ;(这两个成对出现)   控制与其他元素距离---上右下左---顺时针转一圈    ----> 0 即与接触的元素距离0
+position:fixed;    //生成绝对定位的元素，相对于浏览器窗口进行定位
+width:20%;    是相对其外壳div大小的比例
+*/
+
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0 ; scroll-behavior: smooth;}
+body{background-color:#DDDFE2;position: relative; }
+
+
+::-webkit-scrollbar {display:none}  /*不显示滑动条*/
+
+.body.vscode-light {background: white;color: black;} /* 浅色主题 */
+body.vscode-dark {background: #252526;color: white;} /* 深色主题 */
+body.vscode-high-contrast {background: white;color: rgb(43, 213, 255);} /* 高对比度主题 */
+
+
+
+
+#视频播放区id{
+    display:none
+}
+ 
+
+
+#div按钮区_鼠标感知区域{              /*为按钮区 套上一层div外壳， 处理hover动画*/
+    position:relative;display:block;    
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;  
+    margin:-96% 0 0 0;
+    padding: 0;
+}
+
+#div按钮区_鼠标感知区域:hover {
+    margin:0;
+}
+
+
+
+.通知区 { 
+    padding: 0; margin:10px 0 10px  30px;        /*消除与其他div的距离*/
+    height: 28px;
+    font-family: "雅黑";   /*相对 main 定位*/
+    font-size: 20px; 
+    color: #ffffff;
+    text-shadow: 
+    0 1px hsl(0,0%,85%),
+    0 2px hsl(0,0%,80%),
+    0 3px hsl(0,0%,75%), 
+    0 4px hsl(0,0%,70%), 
+    0 5px hsl(0,0%,65%),
+    0 5px 10px black;
+}
+
+
+
+.div按钮区域{ 
+    padding: 0;margin: 0 0 0 -20px ; /*消除与其他div的距离*/
+    
+}
+/*列表*/
+.div按钮区域 ul{   margin:0  ; }
+.div按钮区域 li{   width:30%;    /*每行几个图标 距离*/
+    display:inline-block;    /*显示在同一行*/
+    text-align:center; vertical-align:top;  /*水平顶部对齐 */
+    margin:10px 0 10px 0;    /*图标上下距离   上右下左   顺时针转一圈 */
+    list-style:none;
+}
+
+/*图标*/
+.div按钮区域 .图片 {                         
+    display:block;  width:23vw; height:23vw; /*父容器大小  大小确定后，它的hover  触发img 动画，避免无限触发*/  
+    border-radius:20%; margin: auto ;   /*图片 居中*/ 
+}
+
+.div按钮区域 .图片 img{
+    box-shadow:0 5px 10px 0 rgba(57, 155, 194, 0.349);
+    backdrop-filter:blur(30px); /*背景模糊*/
+    border-radius:20%; margin: auto ;    /*图片 居中*/
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    width:23vw; height:23vw;   object-fit: contain;  /*100%相对父容器大小而言  缩小图片不变形  */
+}
+
+.div按钮区域 li:nth-child(1) .图片 img{  content: url("./图标/1设置.png"); }
+.div按钮区域 li:nth-child(2) .图片 img{  content: url("./图标/15主页.png"); }
+.div按钮区域 li:nth-child(3) .图片 img{  content: url("./图标/23小毛球.png");}
+.div按钮区域 li:nth-child(4) .图片 img{  content: url("./图标/2刷新.png"); }
+.div按钮区域 li:nth-child(5) .图片 img{  content: url("./图标/16蜜蜂.png"); }
+.div按钮区域 li:nth-child(6) .图片 img{  content: url("./图标/62叶子.png"); }
+.div按钮区域 li:nth-child(7) .图片 img{  content: url("./图标/27下载.png"); }
+.div按钮区域 li:nth-child(8) .图片 img{  content: url("./图标/70芦苇.png"); }
+.div按钮区域 li:nth-child(9) .图片 img{  content: url("./图标/7猫.png"); }
+
+/*img外面套一层外壳 div（.图片） ，这个是为 hover 准备的， 它触发 img 动画效果*/
+/*点击动作*/  /* 图片:hover  控制子元素，避免底部边沿无限触发 */
+.div按钮区域 .图片:hover img{  transform:translate3d(0,-4px,0); box-shadow:0 5px 12px 0 rgb(255, 255, 255);}
+.div按钮区域 .图片:active img{transform:translate3d(0,0,0); }
+
+
+
+
+
+.文本框 {
+    position:absolute;
+    outline: none;   -webkit-user-modify: read-write-plaintext-only; /*去掉黄色方框*/
+    z-index: 998; /* z轴， 图层高的在上面*/
+    text-align:left;   
+    overflow: scroll ;  /*多余的文本 滑动条*/
+    width:200px;height:150px;
+    font-family: "雅黑";
+    font-size: 14px; 
+    color: #000000; 
+
+    white-space:pre-wrap;	  /*连续的空白符会被保留。在遇到换行符或者<br>元素，或者需要为了填充「行框盒子(line boxes)」时才会换行。*/
+    resize:none; 
+   
+    border-radius: 10px; /*圆角*/  
+    /*  box-shadow: 5px 5px 1px #0000002f;    */
+    /* box-shadow:inset 4px 4px 4px 0px  rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);  */
+     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.35);
+    background-color: #DDDFE2;
+    /* backdrop-filter:blur(30px);  背景模糊*/
+}
+.文本框:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: 闪烁特效 2s ease-in-out infinite;
+}
+   
+.选择框 {
+    font-size: 14px; 
+    --消息窗口边框颜色: #c232aa5b;
+    z-index: 999;
+    /* background:  #e0e5ec; */
+    white-space: nowrap;/* 表示不折行显示 */
+    position:absolute;
+    z-index: 999; /* z轴， 图层高的在上面    border:1px solid var(--消息窗口边框颜色); */
+    
+    /* box-shadow:inset 4px 4px 4px 0px  rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);  */
+     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.35);
+
+    border-radius: 5px;  /*圆角  */ 
+    padding: 10px 25px;
+
+    background-color: #DDDFE2;
+    /* backdrop-filter:blur(30px);  背景模糊*/
+
+}
+.选择框:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: 闪烁特效 2s ease-in-out infinite;
+
+}
+@keyframes 闪烁特效 {
+    0% { transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { transform: scale(50) rotate(45deg); opacity: 0; }
+}
+.选择框图标{
+    content:url(./图标/60苹果.png);  /* 相当于 src="图片路径" */
+    margin-top: 17px;;
+    display:block;height:auto; width: 30px;;
+    object-fit: contain;  /*缩小图片不变形  */
+}
+
+
+
+.按钮模型 {
+    width: 60px;
+    height: 35px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display:inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),  /* 阴影*/
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+.按钮样式1 {
+    border: none;
+    color: #000;
+  }
+.按钮样式1:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    direction: rtl;
+    border-radius: 5px;
+    box-shadow:
+    -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+}
+.按钮样式1:hover {
+    color: #000;
+}
+.按钮样式1:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+.按钮样式1:active {
+    top: 2px;
+}
+
+
+.按钮样式2 {
+    border: none;
+    color: #000;
+  }
+.按钮样式2:after {
+    background: #ff6666b6;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    direction: rtl;
+    border-radius: 5px;
+    box-shadow:
+    inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+}
+.按钮样式2:hover {
+    color: #000;
+}
+.按钮样式2:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+.按钮样式2:active {
+    top: 2px;
+}
+
+
+
+
+
+
+
+
+
+/*  ===========  点击后生成的网页生成的网页实例  =====================================
+<div id="div文件目录区id" style="display: block;">                  //显示区域
+        <ol id="C:\Users\lwl\测试" class="根目录条目ol样式">        //路径作为id         
+            <li class="目录li节点-选中">                            //图标  文件名标题
+                <p class="默认img图片 图标_蓝色文件夹打开"></p>  
+                <p class="文件名">测试</p>
+            </li>
+                    <ol id="C:\Users\lwl\测试\新建文件夹" class="文件条目ol样式">      //子文件、文件夹
+                        <li class="目录li节点">              
+                                <p class="默认img图片 图标_文件夹"></p>
+                                <p class="文件名">新建文件夹</p>
+                            </li>
+                    </ol>
+                    <ol id="C:\Users\lwl\测试\新建文本文档.txt" class="文件条目ol样式">  //子文件、文件夹
+                            <li class="目录li节点">              
+                                <p class="默认img图片 图标_文件txt"></p>
+                                <p class="文件名">新建文本文档.txt</p>
+                            </li>
+                    </ol>
+        </ol>
+        <ol id="C:\Users\lwl\.vscode\extensions\lwleen-theme" class="根目录条目ol样式">  
+            <li class="目录li节点">              
+                        <p class="默认img图片 图标_蓝色文件夹"></p>  
+                        <p class="文件名">lwleen-theme</p>
+            </li>
+        </ol>
+</div>
+*/
+
+
+
+#div文件树id{  
+    margin: 6px 0 0 0 ; padding: 0;  /* 与其他元素距离  */
+   
+    width: 100%; 
+    position: relative; /* 相对于原来位置移动，元素设置此属性之后仍然处在文档流中，不影响其他元素的布局*/
+    display:none;       /* 默认隐藏，有数据时由程序主动开启 */
+    overflow: hidden; 
+    
+    --li条目高度:25px;  /*自定义属性  读取值用 var(--li条目高度) */
+    --img图片高度:17px;  /* var(--img图片高度)  */
+    --p文件名字体大小:14px;
+
+    --菜单宽度:125px; /* var(--菜单宽度)   c232aa5b */
+
+    --根目录边框颜色: #99999960;   /*  #99999960 */
+    --仓库边框颜色: #29a6b95b;
+    --仓库标题字体大小:17px;
+    --仓库标题颜色:black;
+
+    --条目悬浮颜色: #90bac05b;
+    
+    --条目重命名颜色: #ffa666b6;  /* 删除 下载 推送 都是动态渐变色 */
+
+
+    /* 下面禁止正常模式下文本被选中， 防止误操作 */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    box-shadow:
+    -7px -7px 10px 0px rgba(241, 241, 241, 0.6),
+   -4px -4px 5px 0px rgba(241, 241, 241, 0.6),
+   7px 7px 10px 0px #0002,
+   4px 4px 5px 0px #0001;
+   
+   border-radius: 10px;  
+
+}
+
+#我的仓库标题id{
+    position:relative;  /*  position:absolute; 相对 div文件树id 定位*/
+    margin: 0; padding: 5px 0 12px 6px;
+    transition: 0.5s ease;  /*动态载入    transform: translate(0, -50%);*/
+   
+    font-size: var(--仓库标题字体大小); font-weight:500;
+    text-shadow: 
+    0 1px hsl(0,0%,85%),
+    0 2px hsl(0,0%,80%);
+
+
+    overflow: hidden;  /* 溢出的图像 隐藏 */
+    position: relative; /* 必须有 给after提供定位 */
+}
+#我的仓库标题id:hover{
+    cursor:pointer;     /*CSS鼠标手型效果*/
+    font-size: var(--仓库标题字体大小); 
+    color: var(--仓库标题颜色); 
+    text-shadow: 
+    0 1px hsl(0,0%,85%),
+    0 2px hsl(0,0%,80%),
+    0 3px hsl(0,0%,75%), 
+    0 4px hsl(0,0%,70%), 
+    0 5px hsl(0,0%,65%),
+    0 5px 10px black;
+
+    transition: all 0.6s ease-in-out;
+}
+#我的仓库标题id:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 120%;
+    background: #90bac0a8;
+    transition: all 0.6s ease-in-out;
+    transform: translateX(90%) translateY(0%) rotate(0deg);
+}
+  
+#我的仓库标题id:hover:after {
+    margin-left: -15%;
+    transform: translateX(0%) translateY(0%) rotate(0deg);
+
+    transition: all 0.6s ease-in-out;
+    /* box-shadow:
+    -4px -4px 5px 0px #90bac0a8,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001; */
+}
+#我的仓库标题id:active{
+    top:2px;              /*点击后 弹跳效果*/
+}
+
+
+
+#div文件目录区id {
+    display:none;      /* 默认不显示 */
+    position:relative; /* absolute:元素会脱离文档流，相对于父元素 relative 位置定位 */
+    width: 100%;       /* 全宽 */
+    padding: 0 0 0 0;  /* 内部位移 */  /* 内部位移 */
+    margin: 0 0 0 0;
+ 
+    border-radius: 5px;  
+    /* border:1px solid var(--根目录边框颜色);   */
+
+    box-shadow: 0px   -1px  1px  #99999960 ;  /*上边框*/
+           /*     0px   1px   1px  #99999960 , 下边框*/
+           /*     1px    0    1px #c53f3f60 , 右边框*/
+            /*    -1px   0    1px #3ea51f60 , 左边框*/
+    cursor: pointer;  /*cursor: pointer;   鼠标样式*/
+
+}
+
+
+#div仓库目录区id {
+    display:none;
+    position:relative; /* absolute:元素会脱离文档流，相对于父元素 relative 位置定位 */
+    width: 100%; 
+    padding: 0;  /* 内部位移 */
+    margin: 0;  /* 外边界 */ /* 上 右 下 左   -34 仓库条目整体距离左边框的距离*/
+    
+    border-radius: 5px; 
+
+    /* border:1px solid var(--仓库边框颜色);  */
+    cursor: pointer;
+}
+
+
+.根目录条目ol样式  {  white-space: nowrap;  /*超出区域的文本不换行*/
+    margin: 0 0 0 5px;    padding: 0;    /* 上 右 下 左   顺时针一圈 */
+    list-style: none; 
+}
+
+.文件条目ol样式{  white-space: nowrap;    /*超出区域的文本不换行*/
+    margin: 0 0 0 16px;   padding: 0;     /* 上 右 下 左  -24  每级ol相差的距离*/
+    list-style: none; 
+
+}
+
+@keyframes 背景渐变{ to {background-position:300%  0}}
+.目录li节点{
+    height:var(--li条目高度);
+}
+.目录li节点:hover{
+    background: var(--条目悬浮颜色);
+    border-color: var(--条目悬浮颜色);
+    transition: all 0.3s ease;
+}
+
+
+
+.目录li节点-选中,
+.目录li节点-选中:hover {
+    --条目选中颜色: #90bac0a8;
+    height:var(--li条目高度);
+  
+    background: var(--条目选中颜色);
+    border-color: var(--条目选中颜色); 
+
+    transition: all 0.3s ease; 
+}
+ 
+.目录li节点-重命名,
+.目录li节点-重命名:hover {
+    height:var(--li条目高度);
+    background: var(--条目重命名颜色);
+    border-color: var(--条目重命名颜色);
+}
+.目录li节点-删除,
+.目录li节点-删除:hover {
+    height:var(--li条目高度); 
+    background-size:300% 100%;
+    background-image:linear-gradient( to right,#ff6666b6 0%,#ffffff 20%,#ff6666b6 50%,#ffffff 75%,#ff6666b6 100% );
+    animation:背景渐变 9s infinite linear /*这个时间越大，滑动颜色越慢*/
+}
+.目录li节点-推送仓库,
+.目录li节点-推送仓库:hover {
+    height:var(--li条目高度);
+    background-size:300% 100%;
+    background-image:linear-gradient( to right,#9cf 0%,#f9c 25%,#ec8 50%,#7eb 75%,#9cf 100% );
+    animation:背景渐变 9s infinite linear  /*这个时间越大，滑动颜色越慢*/
+}
+.目录li节点-下载仓库, 
+.目录li节点-下载仓库:hover {
+    height:var(--li条目高度); 
+    background-size:300% 100%;
+    background-image:linear-gradient( to right,#0066ff83 0%,#ffffff 20%,#0066ff83 50%,#ffffff 75%,#0066ff83 100% );
+    animation:背景渐变 9s infinite linear  /*这个时间越大，滑动颜色越慢*/
+}
+
+
+.文件名 {
+    margin: 0 0 0 1px; padding: 0;   /*  图标位置 居中   1px 是和文字的距离 */
+    font-size: var(--p文件名字体大小);  
+    display: inline-block;  /*inline多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行  inline-block 将对象呈现为inline对象，但是对象的内容作为block对象呈现。*/
+
+    vertical-align:middle;  /*居中中间对齐 */
+    outline: none;  /* 没有外面的方框 */
+}
+.默认img图片{   /*上边距是 -3.5px   右边距是 1.5px*/
+    margin: 1px 0 0 1px;   padding: 0 0 0 0;/*  图标位置 居中   1px 是和文字的距离   距离上下为0*/
+    display: inline-block;
+    outline: none;  /*去掉黄色方框*/
+    width: var(--img图片高度);height: var(--img图片高度);  /*正方形*/
+    /*  background-repeat: no-repeat;   背景不重复，配合 background-size: cover  也可以实现缩放 */
+    vertical-align:middle;  /*居中中间对齐 */
+    object-fit: contain; 
+}
+ /*object-fit: contain;   100%相对父容器大小而言  缩小图片不变形  */
+.图标_文件夹{        content: url("./图标/29文件夹.png")         }
+.图标_文件夹打开{     content: url("./图标/30文件夹打开.png");      }
+
+.图标_对号{          content:  url("./图标/17对号.png");         }
+.图标_锁{           content:  url("./图标/18锁.png");             }
+.图标_灰色_对号{    content:  url("./图标/17.5对号.png");         }
+.图标_灰色_锁{      content:  url("./图标/18.5锁.png");          }
+.图标_克隆{      content:  url("./图标/75克隆.png");          }
+.图标_灰色_克隆{      content:  url("./图标/75.5克隆.png");          }
+
+.图标_仓库文件夹打开 {content:  url("./图标/72仓库.png");         }  
+.图标_仓库文件夹 {  content:  url("./图标/72仓库.png");           }    
+.图标_根目录文件夹 {    content:  url("./图标/29文件夹.png");       }
+.图标_根目录文件夹打开 {content:  url("./图标/30文件夹打开.png");    }
+
+
+.图标_文件{         content: url("./图标/扩展名图标/1文件.png")  ;  }
+.图标_文件md{       content:  url("./图标/扩展名图标/md.png");      }
+.图标_文件图片{     content:  url("./图标/扩展名图标/3图片.png");   }
+.图标_文件sh{        content:  url("./图标/扩展名图标/sh.png");     }
+.图标_文件txt{      content:  url("./图标/扩展名图标/txt.png");      }
+.图标_文件html{      content:  url("./图标/扩展名图标/html.png");  }
+.图标_文件conf{     content:  url("./图标/扩展名图标/conf.png");    }
+.图标_文件json{      content:  url("./图标/扩展名图标/json.png");    }
+.图标_文件js{       content:  url("./图标/扩展名图标/js.png");      }
+.图标_文件ts{        content:  url("./图标/扩展名图标/ts.png");      }
+.图标_文件cpp{      content:  url("./图标/扩展名图标/cpp.png");     }
+.图标_文件c{         content:  url("./图标/扩展名图标/c.png");      }
+.图标_文件py{       content:  url("./图标/扩展名图标/py.png");      }
+.图标_文件mp4{       content: url("./图标/扩展名图标/mp4.png");      }
+
+
+
+.默认菜单 {
+    display: block;
+    position: absolute;
+    width: var(--菜单宽度);
+    margin: 0;padding: 6px 0 6px 0;
+    font-size: 14px;
+    line-height: 15px;
+
+    border-radius: 2px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.35);
+    background-color: #DDDFE2;
+    /*  backdrop-filter:blur(30px);  背景模糊*/
+
+    /* text-align:center;     居中*/
+} 
+.默认菜单::before {
+    display: block;
+    position: absolute;
+    content: "";
+  
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    z-index: -1;
+}
+.默认菜单 hr {
+    border: none;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.10);
+    margin: 6px 1px 5px;
+    padding: 0;
+  }
+.默认菜单 menuitem {
+    margin: 0;padding: 1px 0 1px 20px;  /*文本位置*/
+    display: block;
+ 
+    border-top: 1px solid rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+  }
+.默认菜单 menuitem::after {
+    vertical-align: 2px;
+    content: attr(label);
+  }
+.默认菜单 menuitem:hover {
+    background: linear-gradient(to right, #ff66664d 0%, #90bac0c5 100%);   /* ff66664d   */
+  }  
+.默认菜单 menuitem:hover::after {
+    color: rgb(0, 0, 0);
+  }
+  
+
+ 
+.星球1 { z-index: -1; /*背景*/
+    opacity:0.3; /*半透明*/
+    position:absolute; margin-left:60%;margin-top:200%;left:-69px;
+    transition: transform 1s ease 0s, opacity 1s ease 0s;/*transition 直译为过渡，即给属性变化添加过渡效果。*/ 
+    -moz-transition: -moz-transform 1s ease 0s, opacity 1s ease 0s;
+    -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s;
+    -o-transition: -o-transform 1s ease 0s, opacity 1s ease 0s;
+    -ms-transition: -ms-transform 1s ease 0s, opacity 1s ease 0s;
+}
+
+.星球1:hover {z-index: 1; 
+    opacity:1; /*半透明*/ 
+}
+ 
+
+
+#漂浮动画区id{
+    z-index: -1; /*背景*/ 
+    overflow: hidden;  /*元素内的内容溢出的时候使它隐藏溢出的部分*/
+}
+
+#宇航员漂浮动画id {
+
+    background:  url(./图标/41宇航员.png);
+    background-size: cover;
+    background-size:100% 100%; 
+    object-fit: contain;  /*缩小图片不变形  */
+
+    opacity:1; /*半透明*/ 
+    background-repeat: repeat;
+    background-position: center center;
+    position:absolute; 
+    width: 159px;       /*  指定大小与图片大小相同  */
+    height: 136px; 
+    
+    
+    top:0;          /* 左上角为 0 0  以这个坐标定位位置  */
+    left: 130px;
+    /* margin-top:255%;margin-left:40%; 元素 位置*/
+    
+    padding:0 ; justify-content: center;
+    
+    animation: 宇航员漂浮动画 linear 200s;          /*关键帧动画transition 只能做单个动作，如果动画包含多个动作，这时候就需要 animation*/
+    animation-iteration-count: infinite;          /*动画执行的次数  无限次*/
+    animation-direction: reverse;   /* 指定动画运行的方向*/
+   
+}
+ 
+
+@keyframes 宇航员漂浮动画
+{
+    0% {/*transform 直译为变换，虽然名字和 transition 有点像，
+        但是它和动画无关。transition 是一个状态到另一个状态的变化过程，
+        而 transform 仅仅是静止的最终状态。*/
+        transform: translate3d(-38px,100px,0) rotate(0);
+    }
+    20% {
+        transform: translate3d(-150px,83px,0) rotate(90deg);
+    }
+    30% {
+        transform: translate3d(-130px,-100px,0) rotate(0);
+    }
+    40% {
+        transform: translate3d(-140px,-130px,0) rotate(-90deg); 
+    }
+    60% {
+        transform: translate3d(-38px,-100px,0) rotate(0); 
+    }
+    80% {
+        transform: translate3d(-50px,50px,0) rotate(90deg); 
+    }
+    100% {
+        transform: translate3d(-38px,100px,0) rotate(0);  
+    }
+}
+
+
+
+#动画区id {
+    position: absolute;margin-top:150%;
+    border-width: 1px;
+    border-color: #000000;
+    background-color: #9cf;
+    border-style: solid;
+
+}
+
+ 
+

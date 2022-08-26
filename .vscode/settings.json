@@ -3,7 +3,7 @@
         "*.md": "default",
         "*.ipynb": "jupyter-notebook",
         "*.jpg": "cweijan.officeViewer",
-        "*.pdf": "default"
+        "*.pdf": "pdf.preview"
     },
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,

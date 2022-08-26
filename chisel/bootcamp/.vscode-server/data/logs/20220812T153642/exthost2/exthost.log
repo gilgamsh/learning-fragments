@@ -1,0 +1,24 @@
+[2022-08-12 15:37:54.901] [exthost] [info] Extension host with pid 1085 started
+[2022-08-12 15:37:55.187] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-08-12 15:37:55.417] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-08-12 15:37:55.577] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-08-12 15:37:55.827] [exthost] [info] Lock '/home/bootcamp/.vscode-server/data/User/workspaceStorage/b42f023285bb4e1ddb03d26cfecc6b77/vscode.lock': Lock acquired.
+[2022-08-12 15:37:56.034] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-08-12 15:37:56.578] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-08-12 15:37:57.109] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-08-12 15:37:57.461] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-08-12 15:37:57.580] [exthost] [info] Eager extensions activated
+[2022-08-12 15:39:40.998] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:markdown'
+[2022-08-12 15:39:41.627] [exthost] [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+[2022-08-12 15:39:44.555] [exthost] [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features
+[2022-08-12 15:40:17.714] [exthost] [info] ExtensionService#_doActivateExtension lwleen.lwleen-theme-vscode-plugin, startup: false, activationEvent: 'onStartupFinished'
+[2022-08-12 15:40:19.466] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-08-12 15:40:20.235] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-08-12 15:40:20.932] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+[2022-08-12 15:40:48.597] [exthost] [info] ExtensionService#_doActivateExtension GitHub.copilot, startup: false, activationEvent: 'onStartupFinished'
+[2022-08-12 15:40:53.031] [exthost] [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter-renderers, startup: false, activationEvent: 'onNotebook:*'
+[2022-08-12 15:42:10.209] [exthost] [info] ExtensionService#_doActivateExtension ms-toolsai.jupyter, startup: false, activationEvent: 'onNotebook:jupyter-notebook'
+[2022-08-12 15:43:52.857] [exthost] [info] ExtensionService#_doActivateExtension scalameta.metals, startup: false, activationEvent: 'onLanguage:scala'
+[2022-08-12 15:45:19.124] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-08-12 15:45:19.134] [exthost] [info] Lock '/home/bootcamp/.vscode-server/data/User/workspaceStorage/b42f023285bb4e1ddb03d26cfecc6b77/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+[2022-08-12 15:45:19.365] [exthost] [info] Extension host with pid 1085 exiting with code 0

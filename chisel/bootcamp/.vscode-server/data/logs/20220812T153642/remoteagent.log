@@ -1,0 +1,94 @@
+[2022-08-12 15:36:43.772] [remoteagent] [info] Extension host agent started.
+[2022-08-12 15:36:44.936] [remoteagent] [info] [127.0.0.1][ae4054aa][ManagementConnection] New connection established.
+[2022-08-12 15:36:48.534] [remoteagent] [info] [127.0.0.1][4ade53ac][ExtensionHostConnection] New connection established.
+[2022-08-12 15:36:48.878] [remoteagent] [info] [127.0.0.1][4ade53ac][ExtensionHostConnection] <375> Launched Extension Host Process.
+[2022-08-12 15:36:49.226] [remoteagent] [warning] No ptyHost heartbeat after 6 seconds
+[2022-08-12 15:36:50.467] [remoteagent] [info] Getting Manifest... ms-ceintl.vscode-language-pack-zh-hans
+[2022-08-12 15:36:51.049] [remoteagent] [info] Installing extension: ms-ceintl.vscode-language-pack-zh-hans
+[2022-08-12 15:37:00.843] [remoteagent] [info] Downloaded extension: ms-ceintl.vscode-language-pack-zh-hans /home/bootcamp/.vscode-server/extensionsCache/ms-ceintl.vscode-language-pack-zh-hans-1.70.8100912
+[2022-08-12 15:37:07.916] [remoteagent] [info] Extracted extension to /home/bootcamp/.vscode-server/extensions/.2691cb20-fed4-4831-8cd3-d3a458172de5: ms-ceintl.vscode-language-pack-zh-hans
+[2022-08-12 15:37:08.163] [remoteagent] [info] Renamed to /home/bootcamp/.vscode-server/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.70.8100912
+[2022-08-12 15:37:08.200] [remoteagent] [info] Extracting completed. ms-ceintl.vscode-language-pack-zh-hans
+[2022-08-12 15:37:08.201] [remoteagent] [info] Adding language packs from the extension ms-ceintl.vscode-language-pack-zh-hans
+[2022-08-12 15:37:09.688] [remoteagent] [info] Extension installed successfully: ms-ceintl.vscode-language-pack-zh-hans
+[2022-08-12 15:37:24.431] [remoteagent] [info] [127.0.0.1][ae4054aa][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2022-08-12 15:37:24.538] [remoteagent] [info] [127.0.0.1][4ade53ac][ExtensionHostConnection] <375> Extension Host Process exited with code: 0, signal: null.
+[2022-08-12 15:37:42.180] [remoteagent] [info] [127.0.0.1][14876b9b][ManagementConnection] New connection established.
+[2022-08-12 15:37:44.569] [remoteagent] [info] [127.0.0.1][17e44190][ExtensionHostConnection] New connection established.
+[2022-08-12 15:37:44.859] [remoteagent] [info] [127.0.0.1][17e44190][ExtensionHostConnection] <1085> Launched Extension Host Process.
+[2022-08-12 15:38:04.389] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: No such file or directory (EUNKNOWN) (path: /)
+[2022-08-12 15:38:04.390] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: No such file or directory
+[2022-08-12 15:38:13.822] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: inotify_add_watch on '//proc/1381/net/ipt_CLUSTERIP' failed: No such file or directory (EUNKNOWN) (path: /)
+[2022-08-12 15:38:13.826] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: inotify_add_watch on '//proc/1381/net/ipt_CLUSTERIP' failed: No such file or directory
+[2022-08-12 15:38:22.310] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: inotify_add_watch on '//proc/1453/net/ipt_CLUSTERIP' failed: No such file or directory (EUNKNOWN) (path: /)
+[2022-08-12 15:38:22.312] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: inotify_add_watch on '//proc/1453/net/ipt_CLUSTERIP' failed: No such file or directory
+[2022-08-12 15:38:29.424] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: inotify_add_watch on '//proc/1515/net/rpc' failed: No such file or directory (EUNKNOWN) (path: /)
+[2022-08-12 15:38:29.425] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: inotify_add_watch on '//proc/1515/net/rpc' failed: No such file or directory
+[2022-08-12 15:38:35.511] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: inotify_add_watch on '//proc/1574/net/nfsfs' failed: No such file or directory (EUNKNOWN) (path: /)
+[2022-08-12 15:38:35.514] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: inotify_add_watch on '//proc/1574/net/nfsfs' failed: No such file or directory
+[2022-08-12 15:38:41.604] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: inotify_add_watch on '//proc/1632/net/rpc' failed: No such file or directory (EUNKNOWN) (path: /)
+[2022-08-12 15:38:41.606] [remoteagent] [error] [File Watcher (universal)] gave up attempting to restart watcher after error: inotify_add_watch on '//proc/1632/net/rpc' failed: No such file or directory
+[2022-08-12 15:40:03.662] [remoteagent] [info] Installing extension: lwleen.lwleen-theme-vscode-plugin
+[2022-08-12 15:40:14.901] [remoteagent] [info] Extracted extension to /home/bootcamp/.vscode-server/extensions/.1bb01f01-74a1-4501-a951-e49114b67409: lwleen.lwleen-theme-vscode-plugin
+[2022-08-12 15:40:14.986] [remoteagent] [info] Renamed to /home/bootcamp/.vscode-server/extensions/lwleen.lwleen-theme-vscode-plugin-2022.11.15
+[2022-08-12 15:40:15.015] [remoteagent] [info] Extracting completed. lwleen.lwleen-theme-vscode-plugin
+[2022-08-12 15:40:15.016] [remoteagent] [info] Extension installed successfully: lwleen.lwleen-theme-vscode-plugin
+[2022-08-12 15:40:44.788] [remoteagent] [info] Installing extension: github.copilot
+[2022-08-12 15:40:44.789] [remoteagent] [info] Installing the extension without checking dependencies and pack github.copilot
+[2022-08-12 15:40:44.794] [remoteagent] [info] Installing extension: ms-toolsai.jupyter-renderers
+[2022-08-12 15:40:44.794] [remoteagent] [info] Installing the extension without checking dependencies and pack ms-toolsai.jupyter-renderers
+[2022-08-12 15:40:46.487] [remoteagent] [info] Extracted extension to /home/bootcamp/.vscode-server/extensions/.60081f00-bda7-4093-9f95-94077d0ad925: github.copilot
+[2022-08-12 15:40:46.664] [remoteagent] [info] Renamed to /home/bootcamp/.vscode-server/extensions/github.copilot-1.40.6471
+[2022-08-12 15:40:46.756] [remoteagent] [info] Extracting completed. github.copilot
+[2022-08-12 15:40:46.757] [remoteagent] [info] Extension installed successfully: github.copilot
+[2022-08-12 15:40:50.801] [remoteagent] [info] Extracted extension to /home/bootcamp/.vscode-server/extensions/.7782cfe8-5aa1-434c-b4a4-7eae6f3fd1c6: ms-toolsai.jupyter-renderers
+[2022-08-12 15:40:50.908] [remoteagent] [info] Renamed to /home/bootcamp/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.9
+[2022-08-12 15:40:50.955] [remoteagent] [info] Extracting completed. ms-toolsai.jupyter-renderers
+[2022-08-12 15:40:50.956] [remoteagent] [info] Extension installed successfully: ms-toolsai.jupyter-renderers
+[2022-08-12 15:40:57.277] [remoteagent] [info] Installing extension: tomoki1207.pdf
+[2022-08-12 15:40:57.282] [remoteagent] [info] Installing the extension without checking dependencies and pack tomoki1207.pdf
+[2022-08-12 15:40:59.932] [remoteagent] [info] Installing extension: scalameta.metals
+[2022-08-12 15:40:59.932] [remoteagent] [info] Installing the extension without checking dependencies and pack scalameta.metals
+[2022-08-12 15:41:03.593] [remoteagent] [info] Installing extension: ms-toolsai.jupyter
+[2022-08-12 15:41:03.597] [remoteagent] [info] Installing the extension without checking dependencies and pack ms-toolsai.jupyter
+[2022-08-12 15:41:06.898] [remoteagent] [info] Installing extension: ms-toolsai.jupyter-renderers
+[2022-08-12 15:41:06.900] [remoteagent] [info] Installing the extension without checking dependencies and pack ms-toolsai.jupyter-renderers
+[2022-08-12 15:41:08.462] [remoteagent] [info] Deleted from disk ms-toolsai.jupyter-renderers /home/bootcamp/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.9
+[2022-08-12 15:41:16.264] [remoteagent] [info] Extracted extension to /home/bootcamp/.vscode-server/extensions/.18964a2a-5be0-4043-b390-57b67d637943: ms-toolsai.jupyter-renderers
+[2022-08-12 15:41:16.404] [remoteagent] [info] Renamed to /home/bootcamp/.vscode-server/extensions/ms-toolsai.jupyter-renderers-1.0.9
+[2022-08-12 15:41:16.492] [remoteagent] [info] Extracting completed. ms-toolsai.jupyter-renderers
+[2022-08-12 15:41:16.493] [remoteagent] [info] Extension installed successfully: ms-toolsai.jupyter-renderers
+[2022-08-12 15:41:16.899] [remoteagent] [info] Installing extension: scalameta.metals
+[2022-08-12 15:41:16.907] [remoteagent] [info] Installing the extension without checking dependencies and pack scalameta.metals
+[2022-08-12 15:41:29.444] [remoteagent] [info] Installing extension: ms-toolsai.jupyter
+[2022-08-12 15:41:29.450] [remoteagent] [info] Installing the extension without checking dependencies and pack ms-toolsai.jupyter
+[2022-08-12 15:41:38.113] [remoteagent] [info] Installing extension: scalameta.metals
+[2022-08-12 15:41:38.114] [remoteagent] [info] Installing the extension without checking dependencies and pack scalameta.metals
+[2022-08-12 15:41:41.522] [remoteagent] [info] Extracted extension to /home/bootcamp/.vscode-server/extensions/.7eff0561-ea04-4975-a63f-eb3069662e16: tomoki1207.pdf
+[2022-08-12 15:41:41.695] [remoteagent] [info] Renamed to /home/bootcamp/.vscode-server/extensions/tomoki1207.pdf-1.2.0
+[2022-08-12 15:41:41.904] [remoteagent] [info] Extracting completed. tomoki1207.pdf
+[2022-08-12 15:41:41.906] [remoteagent] [info] Extension installed successfully: tomoki1207.pdf
+[2022-08-12 15:42:05.496] [remoteagent] [info] Extracted extension to /home/bootcamp/.vscode-server/extensions/.328f5b70-bd4c-46ea-b025-11f6cd250ff8: ms-toolsai.jupyter
+[2022-08-12 15:42:05.639] [remoteagent] [info] Renamed to /home/bootcamp/.vscode-server/extensions/ms-toolsai.jupyter-2022.7.1102252217
+[2022-08-12 15:42:05.760] [remoteagent] [info] Extracting completed. ms-toolsai.jupyter
+[2022-08-12 15:42:05.763] [remoteagent] [info] Extension installed successfully: ms-toolsai.jupyter
+[2022-08-12 15:42:34.543] [remoteagent] [info] Extracted extension to /home/bootcamp/.vscode-server/extensions/.d3b7478e-082e-48ef-90bc-66f53099ae47: ms-toolsai.jupyter
+[2022-08-12 15:42:38.141] [remoteagent] [info] Rename failed because extension was installed by another source. So ignoring renaming. ms-toolsai.jupyter
+[2022-08-12 15:42:38.325] [remoteagent] [info] Extracting completed. ms-toolsai.jupyter
+[2022-08-12 15:42:38.336] [remoteagent] [info] Extension installed successfully: ms-toolsai.jupyter
+[2022-08-12 15:43:49.382] [remoteagent] [info] Extracted extension to /home/bootcamp/.vscode-server/extensions/.bab1c01c-ec95-4716-9867-da22f36a904d: scalameta.metals
+[2022-08-12 15:43:49.462] [remoteagent] [info] Renamed to /home/bootcamp/.vscode-server/extensions/scalameta.metals-1.19.0
+[2022-08-12 15:43:49.513] [remoteagent] [info] Extracting completed. scalameta.metals
+[2022-08-12 15:43:49.514] [remoteagent] [info] Extension installed successfully: scalameta.metals
+[2022-08-12 15:44:15.200] [remoteagent] [info] [127.0.0.1][17e44190][ExtensionHostConnection] The client has reconnected.
+[2022-08-12 15:44:18.973] [remoteagent] [info] Extracted extension to /home/bootcamp/.vscode-server/extensions/.5085fb4c-a571-46bf-893c-720a7a05d3de: scalameta.metals
+[2022-08-12 15:44:37.188] [remoteagent] [info] [127.0.0.1][17e44190][ExtensionHostConnection] The client has reconnected.
+[2022-08-12 15:44:48.895] [remoteagent] [info] Rename failed because extension was installed by another source. So ignoring renaming. scalameta.metals
+[2022-08-12 15:44:49.013] [remoteagent] [info] Extracting completed. scalameta.metals
+[2022-08-12 15:44:49.014] [remoteagent] [info] Extension installed successfully: scalameta.metals
+[2022-08-12 15:44:56.235] [remoteagent] [info] Extracted extension to /home/bootcamp/.vscode-server/extensions/.6ace0210-dfca-4206-a351-9197d7e59be1: scalameta.metals
+[2022-08-12 15:45:10.240] [remoteagent] [info] Rename failed because extension was installed by another source. So ignoring renaming. scalameta.metals
+[2022-08-12 15:45:10.270] [remoteagent] [info] Extracting completed. scalameta.metals
+[2022-08-12 15:45:10.271] [remoteagent] [info] Extension installed successfully: scalameta.metals
+[2022-08-12 15:45:19.170] [remoteagent] [info] [127.0.0.1][14876b9b][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2022-08-12 15:45:19.555] [remoteagent] [info] [127.0.0.1][17e44190][ExtensionHostConnection] <1085> Extension Host Process exited with code: 0, signal: null.

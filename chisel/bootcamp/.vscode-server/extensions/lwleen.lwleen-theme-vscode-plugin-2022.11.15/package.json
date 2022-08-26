@@ -1,0 +1,381 @@
+{
+	"name": "lwleen-theme-vscode-plugin",
+	"displayName": "护眼主题",
+	"description": "舒适清晰，中英标点转换。gitee仓库工具。",
+	"license": "MIT",
+	"publisher": "lwleen",
+	"version": "2022.11.15",
+	"icon": "themes/icon.png",
+	"engines": {
+		"vscode": "^1.50.0"
+	},
+	"homepage": "https://gitee.com/lwleen",
+	"repository": {
+		"type": "git",
+		"url": "https://gitee.com/lwleen/vs"
+	},
+	"bugs": {
+		"url": "https://gitee.com/lwleen/vs/issues",
+		"email": "lwleen@qq.com"
+	},
+	"qna": "https://gitee.com/lwleen/vs/issues",
+	"keywords": [
+		"gitee",
+		"仓库",
+		"工具",
+		"标点",
+		"punctuation",
+		"biaodian",
+		"符号",
+		"中英文",
+		"中文标点",
+		"中文符号",
+		"git",
+		"huyan",
+		"zhuti",
+		"zuti",
+		"zu",
+		"zhu",
+		"theme",
+		"lwleen",
+		"cn",
+		"zh",
+		"中文",
+		"主题",
+		"护眼",
+		"蓝色主题",
+		"绿色主题",
+		"一切时空过去未来"
+	],
+	"categories": [
+		"Themes",
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "/入口.js",
+	"contributes": {
+		"themes": [
+			{
+				"label": "护眼主题——浅蓝🦄",
+				"path": "/themes/blue-ui.json",
+				"uiTheme": "vs"
+			},
+			{
+				"label": "护眼主题——浅绿🦄",
+				"path": "/themes/green-ui.json",
+				"uiTheme": "vs"
+			},
+			{
+				"label": "护眼主题——深色🦄",
+				"path": "/themes/dark-ui.json",
+				"uiTheme": "vs-dark"
+			}
+		],
+		"configuration": [
+			{
+				"type": "object",
+				"title": "此页配置总开关",
+				"properties": {
+					"护眼主题.配置总开关🦄": {
+						"type": "boolean",
+						"default": false,
+						"markdownDescription": "**此页的配置将覆盖原有配置，即此页面的配置生效。**  \n  兰陵美酒郁金香，玉碗盛来琥珀光。但使主人能醉客，不知何处是他乡。"
+					}
+				}
+			},
+			{
+				"type": "object",
+				"title": "中转英标点转换",
+				"properties": {
+					"护眼主题.中英标点转换🍺": {
+						"type": "boolean",
+						"default": false,
+						"markdownDescription": "自动将输入的中文标点转为英文符号。"
+					}
+				}
+			},
+			{
+				"type": "object",
+				"title": "仓库功能开关",
+				"properties": {
+					"护眼主题.仓库功能开关🐋": {
+						"type": "boolean",
+						"default": false,
+						"markdownDescription": "可以选择是否在侧边栏显示仓库内容。"
+					},
+					"护眼主题.gitee仓库令牌": {
+						"type": "string",
+						"markdownDescription": "**申请令牌网址：**[https://gitee.com/profile/personal_access_tokens](https://gitee.com/profile/personal_access_tokens)  \n**注意：**安装 git 软件后，才能下载或推送 gitee。下载地址：[https://git-scm.com/downloads](https://git-scm.com/downloads)",
+						"default": ""
+					}
+				}
+			},
+			{
+				"type": "object",
+				"title": "gitee仓库",
+				"properties": {
+					"护眼主题.shell指令🐠": {
+						"type": "string",
+						"markdownDescription": "点击 [ **喵** ]按钮后，执行此处的 shell 指令。例如：ls ~  \n  预设指令： | 打开仓库总目录 | 保存仓库 | ",
+						"default": ""
+					}
+				}
+			},
+			{
+				"type": "object",
+				"title": "启动时显示侧边视图",
+				"properties": {
+					"护眼主题.启动时显示侧边视图": {
+						"type": "boolean",
+						"default": false,
+						"markdownDescription": "启动时，自动显示插件的侧边视图。"
+					},
+					"护眼主题.文件信任": {
+						"type": "string",
+						"default": "不关心",
+						"markdownDescription": "**警告：为了安全使用，请开启！！！ 如果觉得麻烦，可以在安全环境下关闭。**",
+						"enum": [
+							"不关心",
+							"开启",
+							"关闭"
+						]
+					}
+				}
+			},
+			{
+				"type": "object",
+				"title": "显示优化",
+				"properties": {
+					"护眼主题.字体": {
+						"type": "string",
+						"default": "",
+						"markdownDescription": "**推荐字体：** | Cascadia Code | Fira Code | 微软雅黑 | Source Code Pro | Consolas | Inconsolata | Noto Sans CJK SC | MiSans | HarmonyOS Sans SC  \n\n 开源字体 Cascadia Code 下载：[https://github.com/microsoft/cascadia-code/releases](https://github.com/microsoft/cascadia-code/releases) \n\n 开源字体 Fira Code 下载：[https://github.com/tonsky/FiraCode/releases](https://github.com/tonsky/FiraCode/releases)"
+					},
+					"护眼主题.字号大小": {
+						"type": "number",
+						"default": 15,
+						"markdownDescription": "默认 15 号，或写入你喜欢的字体大小。"
+					},
+					"护眼主题.启用连字": {
+						"type": "boolean",
+						"default": true,
+						"markdownDescription": "启动连字，代码易读"
+					},
+					"护眼主题.unicode字符提示": {
+						"type": "string",
+						"default": "关闭",
+						"markdownDescription": "建议关闭。开启后，注释中的 unicode 也会警告",
+						"enum": [
+							"关闭",
+							"开启"
+						]
+					}
+				}
+			},
+			{
+				"type": "object",
+				"title": "括号嵌套着色",
+				"properties": {
+					"护眼主题.括号嵌套着色": {
+						"type": "boolean",
+						"default": true,
+						"markdownDescription": "对 { } 括循环嵌套着色"
+					},
+					"护眼主题.方括号嵌套着色": {
+						"type": "boolean",
+						"default": true,
+						"markdownDescription": "对 [ ] 括循环嵌套着色"
+					}
+				}
+			},
+			{
+				"type": "object",
+				"title": "配置优化",
+				"properties": {
+					"护眼主题.窗口标题栏": {
+						"type": "string",
+						"default": "custom",
+						"markdownDescription": "Linux 用户标显示题栏 custom",
+						"enum": [
+							"custom",
+							"native"
+						]
+					},
+					"护眼主题.布局小图标": {
+						"type": "string",
+						"default": "menu",
+						"markdownDescription": "是否显示窗口右上角的布局按钮",
+						"enum": [
+							"menu",
+							"toggles",
+							"both"
+						]
+					},
+					"护眼主题.迷你地图滑块": {
+						"type": "string",
+						"default": "always",
+						"markdownDescription": "是否显示迷你地图滑块",
+						"enum": [
+							"always",
+							"mouseover"
+						]
+					}
+				}
+			},
+			{
+				"type": "object",
+				"title": "用户配置文件",
+				"properties": {
+					"护眼主题.侧边栏动画🚀": {
+						"type": "string",
+						"default": "关闭动画",
+						"markdownDescription": "注意，动画会消耗显卡资源。",
+						"enum": [
+							"关闭动画",
+							"宇航员动画"
+						]
+					},
+					"护眼主题.查看配置文件📙": {
+						"default": "如果配置出错，可以手动将此页内错误的配置项删除！！！",
+						"markdownDescription": "如果配置出错，可以点击下面的 setting.json ，手动将错误的配置项删除！！！"
+					}
+				}
+			}
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "lwleen_theme",
+					"title": "欢迎",
+					"icon": "/资源/图标/0素描蓝鲸.png"
+				}
+			]
+		},
+		"views": {
+			"lwleen_theme": [
+				{
+					"type": "webview",
+					"id": "护眼主题.侧边栏.设置",
+					"name": "🍏"
+				}
+			]
+		},
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorFocus",
+					"command": "护眼主题.后退跳转",
+					"group": "navigation"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "护眼主题.中英标点转换",
+				"title": "开关"
+			},
+			{
+				"command": "护眼主题.后退跳转",
+				"title": "后退"
+			},
+			{
+				"command": "护眼主题.侧边栏.仓库.shell指令",
+				"title": "shell指令🐠"
+			},
+			{
+				"command": "护眼主题.侧边栏.仓库.网页打开仓库",
+				"title": "项目主页"
+			},
+			{
+				"command": "护眼主题.侧边栏.仓库.文件浏览器打开仓库",
+				"title": "打开文件"
+			},
+			{
+				"command": "护眼主题.侧边栏.仓库.vscode打开仓库",
+				"title": "编辑项目"
+			},
+			{
+				"command": "护眼主题.侧边栏.仓库.下载仓库",
+				"title": "下载仓库"
+			},
+			{
+				"command": "护眼主题.侧边栏.设置.插件说明",
+				"title": "说明"
+			},
+			{
+				"command": "护眼主题.侧边栏.仓库.刷新",
+				"title": "刷新"
+			},
+			{
+				"command": "护眼主题.侧边栏.仓库.点击仓库",
+				"title": "点击仓库"
+			},
+			{
+				"command": "护眼主题.网页面板点击",
+				"title": "网页面板点击"
+			},
+			{
+				"command": "护眼主题.侧边栏.设置.快捷指令",
+				"title": "快捷指令"
+			},
+			{
+				"command": "护眼主题.侧边栏.设置.打开设置",
+				"title": "打开设置"
+			},
+			{
+				"command": "护眼主题.侧边栏.设置.欢迎主页",
+				"title": "欢迎主页"
+			},
+			{
+				"command": "护眼主题.侧边栏.设置.配色文件",
+				"title": "配色文件"
+			},
+			{
+				"command": "护眼主题.侧边栏.设置.网页源码",
+				"title": "网页源码"
+			},
+			{
+				"command": "护眼主题.侧边栏.设置.主页源码",
+				"title": "主页源码"
+			},
+			{
+				"command": "护眼主题.侧边栏.设置.插件目录",
+				"title": "插件目录"
+			},
+			{
+				"command": "护眼主题.侧边栏.设置.切换主题",
+				"title": "切换主题"
+			},
+			{
+				"command": "护眼主题.侧边栏.通知.删除",
+				"title": "删除"
+			},
+			{
+				"command": "护眼主题.快捷键_重启护眼主题插件",
+				"title": "重启护眼主题插件"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "护眼主题.快捷键_重启护眼主题插件",
+				"key": "ctrl+f12",
+				"when": "focusedView == 护眼主题.侧边栏.设置"
+			}
+		]
+	},
+	"scripts": {},
+	"dependencies": {},
+	"__metadata": {
+		"id": "d7266357-7cd8-4d52-be5b-fa91258fde73",
+		"publisherDisplayName": "一切时空过去未来",
+		"publisherId": "2e887649-5e20-41b6-99c1-6a22c71687a9",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1660318814902
+	}
+}

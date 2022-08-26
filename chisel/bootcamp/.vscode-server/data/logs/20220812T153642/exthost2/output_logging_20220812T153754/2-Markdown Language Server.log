@@ -1,0 +1,3 @@
+[Debug 15:39:44.311] TableOfContentsProvider: create - file:///chisel-bootcamp/README.md
+[Debug 15:39:44.777] LinkProvider: compute - file:///chisel-bootcamp/README.md
+[Debug 15:39:44.779] MdFoldingProvider: provideFoldingRanges - file:///chisel-bootcamp/README.md
