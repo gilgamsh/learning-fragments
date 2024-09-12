@@ -101,3 +101,17 @@
 | :white_check_mark: | :marks              | print the active marks                                 |
 | :white_check_mark: | :ju[mps]            | print the jump list                                    |
 
+## Fold commands
+
+Pretty much everything fold-related is blocked by [this issue](https://github.com/VSCodeVim/Vim/issues/1004).
+
+| Status             | Command                  | Description                                                                                                  |
+| ------------------ | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| :white_check_mark: | zo                       | Open one fold under the cursor.When a count is given, that many folds deep will be opened.                   |
+| :white_check_mark: | zO                       | Open all folds under the cursor recursively.                                                                 |
+| :white_check_mark: | zc                       | Close one fold under the cursor. When a count is given, that many folds deep are closed.                     |
+| :white_check_mark: | zC                       | Close all folds under the cursor recursively.                                                                |
+| :white_check_mark: | za                       | When on a closed fold: open it. When on an open fold: close it and set 'foldenable'.                         |
+| :white_check_mark: | zM                       | Close all folds: set 'foldlevel' to 0. 'foldenable' will be set.                                             |
+| :white_check_mark: | zR                       | Open all folds. This sets 'foldlevel' to highest fold level.                                                 |
+
