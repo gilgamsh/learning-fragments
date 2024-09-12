@@ -58,3 +58,19 @@
 | ------------------------- | --------------------------------- | -------------------------------------------------------------------------------------------------- | 
 | :white_check_mark: :star: | :1234: .                          | repeat last change (with count replaced with N)                                                    |
 
+## Pattern searches
+
+| Status                    | Command                            | Description                                            | Note                                                                            |
+| ------------------------- | ---------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| :white_check_mark: :star: | :1234: `/{pattern}[/[offset]]<CR>` | search forward for the Nth occurrence of {pattern}     | Currently we only support JavaScript Regex but not Vim's in-house Regex engine. |
+| :white_check_mark: :star: | :1234: `?{pattern}[?[offset]]<CR>` | search backward for the Nth occurrence of {pattern}    | Currently we only support JavaScript Regex but not Vim's in-house Regex engine. |
+| :white_check_mark:        | :1234: n                           | repeat last search                                     |
+| :white_check_mark:        | :1234: N                           | repeat last search, in opposite direction              |
+| :white_check_mark:        | :1234: \*                          | search forward for the identifier under the cursor     |
+| :white_check_mark:        | :1234: #                           | search backward for the identifier under the cursor    |
+| :white_check_mark:        | :1234: g\*                         | like "\*", but also find partial matches               |
+| :white_check_mark:        | :1234: g#                          | like "#", but also find partial matches                |
+| :white_check_mark:        | gd                                 | goto local declaration of identifier under the cursor  |
+| :arrow_down:              | gD                                 | goto global declaration of identifier under the cursor |
+
+
