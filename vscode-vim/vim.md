@@ -88,4 +88,16 @@
 | :white_check_mark:        | gd                                 | goto local declaration of identifier under the cursor  |
 | :arrow_down:              | gD                                 | goto global declaration of identifier under the cursor |
 
+## Marks and motions
+
+| Status             | Command             | Description                                            |
+| ------------------ | ------------------- | ------------------------------------------------------ |
+| :white_check_mark: | m{a-zA-Z}           | mark current position with mark {a-zA-Z}               |
+| :white_check_mark: | `{a-z}              | go to mark {a-z} within current file                   |
+| :white_check_mark: | `{A-Z}              | go to mark {A-Z} in any file                           |
+| :white_check_mark: | `{0-9}              | go to the position where Vim was previously exited     |
+| :white_check_mark: | ``                  | go to the position before the last jump                |
+| :arrow_down:       | `"                  | go to the position when last editing this file         |
+| :white_check_mark: | :marks              | print the active marks                                 |
+| :white_check_mark: | :ju[mps]            | print the jump list                                    |
 
