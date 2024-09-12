@@ -1,6 +1,21 @@
-# Motions
+## Key
 
-## Basic Motions
+:white_check_mark: - command done
+
+:white_check_mark: :star: - command done with VS Code specific customization
+
+:warning: - some variations of the command are not supported
+
+:running: - work in progress
+
+:arrow_down: - command is low priority; open an issue (or thumbs up the relevant issue) if you want to see it sooner
+
+:x: - command impossible with current VSCode API
+
+:1234: - command accepts numeric prefix
+
+
+##  Motions
 
 ### Left-Right Motions
 | Status             | Command        | Description                                                                    |
