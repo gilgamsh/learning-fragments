@@ -45,8 +45,7 @@
 | :1234: i  | insert text before the cursor (N times) (also: Insert)        |
 | :1234: o  | open a new line below the current line, append text (N times) |
 | :1234: x         | delete N characters under and after the cursor     |
-| :1234: <<               | move N lines one shiftwidth left                                                                |
-| :1234: >>               | move N lines one shiftwidth right                                                                |
+
 ### Complex Verb
 
 `c` is short for change = delete text and enter insert mode.
@@ -62,7 +61,10 @@
 | :1234: c{motion}        | change the text that is moved over with {motion}                                                |
 | {visual}c               | change the highlighted text                                                                     |
 | :1234: cc               | change N lines                                                                                  |
-
+| :1234: <{motion}        | move the lines that are moved over with {motion} one shiftwidth left                            |
+| :1234: <<               | move N lines one shiftwidth left                                                                |
+| :1234: >{motion}        | move the lines that are moved over with {motion} one shiftwidth right                           |
+| :1234: >>               | move N lines one shiftwidth right                                                                |
 
 
 ### Motions with Verb
