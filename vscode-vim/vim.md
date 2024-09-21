@@ -16,19 +16,20 @@
 
 ## Most frequently used commands  
 
+### Simple Motion
+
 | Command                            | Description                                                                    |
 | --------------                     | ------------------------------------------------------------------------------ |
 | :1234: h                           | left                                                                           |
 | :1234: l                           | right                                                                          | 
 | :1234: k                           | up N lines                                                                     |
 | :1234: j                           | down N lines                                                                   |
-| 0                                  | to first character in the line                                                 |
-| ^                                  | to first non-blank character in the line                                       |
-| :1234: \$                          | to the last character in the line (N-1 lines lower) (also: End key)            |
-| :1234: f{char}                     | to the Nth occurrence of {char} to the right                                   |
-| :1234: ;                           | repeat the last "f", "F", "t", or "T" N times                                  |
 | :1234: gg                          | goto line N (default: first line), on the first non-blank character            |
 | :1234: G                           | goto line N (default: last line), on the first non-blank character             |
+
+### Simple Search
+| Command                            | Description                                                                    |
+| --------------                     | ------------------------------------------------------------------------------ |
 | :1234: \*                          | search forward for the identifier under the cursor                             |
 | :1234: g\*                         | like "\*", but also find partial matches                                       |
 | gd                                 | goto local declaration of identifier under the cursor                          |
@@ -36,9 +37,67 @@
 | :1234: `/{pattern}[/[offset]]<CR>` | search forward for the Nth occurrence of {pattern}                             |
 | :1234: n                           | repeat last search                                                             |
 | :1234: N                           | repeat last search, in opposite direction                                      |
+
+### Simple Verb
+| Command                            | Description                                                                    |
+| --------------                     | ---------- |
+| :1234: a  | append text after the cursor (N times)                        |
+| :1234: i  | insert text before the cursor (N times) (also: Insert)        |
+| :1234: o  | open a new line below the current line, append text (N times) |
+| :1234: x         | delete N characters under and after the cursor     |
+
+### Complex Verb
+
+`c` is short for change = delete text and enter insert mode.
+| Command                            | Description                                                                    |
+| --------------                     | ---------- |
+| :1234: d{motion} | delete the text that is moved over with {motion}   |
+| {visual}d        | delete the highlighted text                        |
+| :1234: dd        | delete N lines                                     |
+| :1234: y{motion} | yank the text moved over with {motion} into a register |
+| {visual}y        | yank the highlighted text into a register              |
+| :1234: yy        | yank N lines into a register                           |
+| :1234: p         | put a register after the cursor position (N times)     |
+| :1234: c{motion}        | change the text that is moved over with {motion}                                                |
+| {visual}c               | change the highlighted text                                                                     |
+| :1234: cc               | change N lines                                                                                  |
+
+
+
+### Motions with Verb
+| Command                            | Description                                                                    |
+| --------------                     | ------------------------------------------------------------------------------ |
+| 0                                  | to first character in the line                                                 |
+| ^                                  | to first non-blank character in the line                                       |
+| :1234: \$                          | to the last character in the line (N-1 lines lower) (also: End key)            |
+| :1234: f{char}                     | to the Nth occurrence of {char} to the right                                   |
+| :1234: ;                           | repeat the last "f", "F", "t", or "T" N times                                  |
+| :1234: w                           | N words forward                                                                |
+| :1234: e                           | N words forward to the end of the Nth word                                     |
+| :1234: b                           | N words backward                                                               |
+| :1234: )                           | N sentences forward                                                            |
+| :1234: (                           | N sentences backward                                                           |
+| :1234: H            | go to the Nth line in the window, on the first non-blank                                           |
+| :1234: L            | go to the Nth line from the bottom, on the first non-blank                                         |
+
+
+
+### Redraw the Screen
+| Command                            | Description                                                                    |
+| --------------                     | ------------------------------------------------------------------------------ |
 | zt                                 | redraw, current line at top of window                                          |
 | zz                                 | redraw, current line at center of window                                       |
 | zb                                 | redraw, current line at bottom of window                                       |
+
+### Fold Braces
+| Command | Description |
+|---------|-------------|
+| zo | Open one fold under the cursor. When a count is given, that many folds deep will be opened. |
+| zO | Open all folds under the cursor recursively. |
+| zc | Close one fold under the cursor. When a count is given, that many folds deep are closed. |
+| zC | Close all folds under the cursor recursively. |
+| za | When on a closed fold: open it. When on an open fold: close it and set 'foldenable'. |
+
 
 ##  Motions
 
