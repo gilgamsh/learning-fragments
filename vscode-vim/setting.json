@@ -1,0 +1,97 @@
+{
+    "vim.leader": "<space>",
+    "vim.useCtrlKeys": false,
+    "vim.easymotion": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            // easy motion
+            "before": [
+                "s"
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "s"
+            ],
+        },
+        {
+            // goto implementation
+            "before": [
+                "g",
+                "i"
+            ],
+            "commands": [
+                "editor.action.peekImplementation"
+            ]
+        },
+        {
+            // goto definition
+            "before": [
+                "g",
+                "d"
+            ],
+            "commands": [
+                "editor.action.revealDefinition",
+                "editor.action.openLink"
+            ]
+        },
+        {
+            // goto references
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.goToReferences"
+            ],
+        },
+        {
+            // goto error
+            "before": [
+                "g",
+                "e"
+            ],
+            "commands": [
+                "go-to-next-error.nextInFiles.error"
+            ]
+        },
+        {
+            // goto warning
+            "before": [
+                "g",
+                "w"
+            ],
+            "commands": [
+                "go-to-next-error.nextInFiles.warning"
+            ],
+        },
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            // easy motion
+            "before": [
+                "s"
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "s"
+            ]
+        },
+    ],
+    "vim.useSystemClipboard": true,
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+}
