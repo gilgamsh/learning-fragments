@@ -45,7 +45,8 @@
 | :1234: i  | insert text before the cursor (N times) (also: Insert)        |
 | :1234: o  | open a new line below the current line, append text (N times) |
 | :1234: x         | delete N characters under and after the cursor     |
-
+| :1234: <<               | move N lines one shiftwidth left                                                                |
+| :1234: >>               | move N lines one shiftwidth right                                                                |
 ### Complex Verb
 
 `c` is short for change = delete text and enter insert mode.
