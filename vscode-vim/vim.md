@@ -80,6 +80,35 @@
 | :1234: H            | go to the Nth line in the window, on the first non-blank                                           |
 | :1234: L            | go to the Nth line from the bottom, on the first non-blank                                         |
 
+### Objects with Verb (Not Motions)
+| Command                            | Description                                                                    |
+| --------------                     | ---------- |
+| :1234: aw         | Select "a word"                                                                              |
+| :1234: iw         | Select "inner word"                                                                          |
+| :1234: aW         | Select "a WORD"                                                                              |
+| :1234: iW         | Select "inner WORD"                                                                          |
+| :1234: as         | Select "a sentence"                                                                          |
+| :1234: is         | Select "inner sentence"                                                                      |
+| :1234: ap         | Select "a paragraph"                                                                         |
+| :1234: ip         | Select "inner paragraph"                                                                     |
+| :1234: a], a[     | select '[' ']' blocks                                                                        |
+| :1234: i], i[     | select inner '[' ']' blocks                                                                  |
+| :1234: a(, a) | Select "a block" (from "[(" to "])")                                                         |
+| :1234: i), i( | Select "inner block" (from "[(" to "])")                                                     |
+| :1234: a>, a<     | Select "a &lt;&gt; block"                                                                    |
+| :1234: i>, i<     | Select "inner <> block"                                                                      |
+| :1234: a{, a} | Select "a Block" (from "[{" to "]}")                                                         |
+| :1234: i{, i} | Select "inner Block" (from "[{" to "]}")                                                     |
+| :1234: at         | Select "a tag block" (from &lt;aaa&gt; to &lt;/aaa&gt;)                                      |
+| :1234: it         | Select "inner tag block" (from &lt;aaa&gt; to &lt;/aaa&gt;)                                  |
+| :1234: a'         | Select "a single quoted string"                                                              |
+| :1234: i'         | Select "inner single quoted string"                                                          |
+| :1234: a"         | Select "a double quoted string"                                                              |
+| :1234: i"         | Select "inner double quoted string"                                                          |
+| :1234: a`         | Select "a backward quoted string"                                                            |
+| :1234: i`         | Select "inner backward quoted string"                                                        |
+| :1234: ia         | Select "inner argument" from the [targets.vim plugin](https://github.com/wellle/targets.vim) |
+| :1234: aa         | Select "an argument" from the [targets.vim plugin](https://github.com/wellle/targets.vim)    |
 
 
 ### Redraw the Screen
