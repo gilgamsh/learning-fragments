@@ -32,6 +32,7 @@
 | :1234: \*                          | search forward for the identifier under the cursor                             |
 | :1234: g\*                         | like "\*", but also find partial matches                                       |
 | gd                                 | goto local declaration of identifier under the cursor                          |
+| gh                                 | show the hover tooltip under the cursor                                        |
 | :1234: `/{pattern}[/[offset]]<CR>` | search forward for the Nth occurrence of {pattern}                             |
 | :1234: n                           | repeat last search                                                             |
 | :1234: N                           | repeat last search, in opposite direction                                      |
