@@ -71,7 +71,6 @@ P: Palette, " " files, ">" for command palette, ":" for line, "@" for symbol
 | Ctrl+Shift+Space | Trigger parameter hints |
 | Shift+Alt+F | Format document |
 | Ctrl+K Ctrl+F | Format selection |
-<!-- | F12 | Go to Definition | -->
 | Alt+F12 | Peek Definition |
 | Ctrl+K F12 | Open Definition to the side |
 | Ctrl+. | Quick Fix |
@@ -141,6 +140,7 @@ P: Palette, " " files, ">" for command palette, ":" for line, "@" for symbol
 <!-- | Ctrl+K Ctrl+S | Keyboard Shortcuts | -->
 <!-- | Ctrl+` | Show integrated terminal | -->
 <!-- | Ctrl+Shift+` | Create new terminal | -->
+<!-- | F12 | Go to Definition | -->
 <!-- | Ctrl+C | Copy selection | -->
 <!-- | Ctrl+V | Paste into active terminal | -->
 <!-- | F11 | Toggle full screen | -->
