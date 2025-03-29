@@ -1,7 +1,7 @@
 ---
-description: 
+description: Good for code style
 globs: 
-alwaysApply: true
+alwaysApply: false
 ---
 
 # General Code Style Guidelines

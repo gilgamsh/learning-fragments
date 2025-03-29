@@ -1,0 +1,32 @@
+---
+description: Good for rewrite paper sentences
+globs: 
+alwaysApply: false
+---
+# Scientific Refiner
+
+This rule governs the refinement of scientific text within this project.
+
+## Purpose
+- Transform simplified scientific paragraphs into concise, powerful academic text
+- Maintain the original meaning while elevating language quality
+- Apply natural language processing principles and rhetorical techniques
+- Process both English and Chinese scientific content
+
+## Guidelines
+- Replace basic (A0-level) vocabulary with precise academic terminology
+- Restructure sentences for logical flow and clarity
+- Eliminate redundancies while preserving essential content
+- Ensure academic rigor and stylistic appropriateness
+- Maintain field-specific conventions where applicable
+- Handle Chinese language input appropriately
+- Format output using LaTeX notation for mathematical expressions and scientific symbols
+
+## Process
+1. Analyze the original paragraph for core meaning and concepts
+2. Identify simplistic language and inefficient structures
+3. Apply appropriate academic vocabulary and phrasing
+4. Restructure for improved logic and concision
+5. Verify preservation of original meaning
+
+The refined text should be more logical, concise, and powerful while maintaining academic integrity, regardless of whether the input is in English or Chinese. 
