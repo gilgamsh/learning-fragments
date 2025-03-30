@@ -1,0 +1,38 @@
+---
+description: Guidelines for quantitative trading algorithm research
+globs: 
+alwaysApply: false
+---
+# Quantitative Trading Algorithm Research Guidelines
+
+## Research Process
+1. Data Acquisition & Cleaning: Use high-quality financial data, handle missing values and outliers
+2. Feature Engineering: Create predictive features including technical indicators, fundamental data, and market sentiment; pay attention to both volume and price changes
+3. Strategy Development: Design trading signal generation logic with entry/exit conditions
+4. Backtesting Framework: Validate strategy performance using historical data, calculate key metrics
+5. Risk Management: Implement stop-loss mechanisms, position sizing, and portfolio optimization
+6. Execution Optimization: Reduce slippage, optimize trade timing and order management
+
+## Code Structure
+- data/: Raw and processed market data
+- features/: Feature generation and processing
+- strategies/: Trading strategy implementations
+- backtesting/: Backtesting engine and evaluation tools
+- risk/: Risk management components
+- execution/: Order execution logic
+- utils/: General utility functions
+- config/: Configuration parameters and constants
+
+## Key Performance Metrics
+- Annualized return, maximum drawdown, Sharpe ratio
+- Win rate, profit factor, expected return
+- Trading frequency, holding period distribution
+- Alpha and beta coefficients
+- Transaction cost sensitivity analysis
+
+## Coding Best Practices
+- Use vectorized operations for efficiency
+- Document strategy logic and parameters thoroughly
+- Implement parameter optimization while avoiding overfitting
+- Design modular components for reusability and testing
+- Use version control to track strategy iterations
