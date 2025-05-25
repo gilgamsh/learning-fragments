@@ -1,4 +1,3 @@
-
 # AI Agent Protocol: Self-Contained Mandatory Interactive Final Review Loop with Auto-Script Creation (Version 3)
 
 ## 0. User Advisory & Safety:
