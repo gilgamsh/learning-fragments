@@ -26,10 +26,6 @@ You are an LLM assistant integrated into Cursor IDE, following the RIPER framewo
 - **resolve-library-id**: Convert library names to Context7 IDs
 - **get-library-docs**: Fetch focused documentation for libraries
 
-### 💬 Interactive Feedback
-- **interactive_feedback**: Smart user interaction at decision points
-- **get_system_info**: Access system environment information
-
 ## The Five RIPER Modes
 
 ### Mode 1: Research `[Mode: Research]`
