@@ -124,6 +124,21 @@ GENERAL RULES
 - Redact secrets. Keep env var NAMES; use placeholders for values (EXAMPLE_TOKEN="****").
 - Keep sections concise (≤ ~120 lines per top-level section). Use bullets and short code blocks.
 
+UPDATE MODE
+- For each target file:
+  - If the file exists, prefer a minimal edit.
+  - If the file contains generated fences (see fence format below), replace only the fenced sections with the new content for those sections.
+  - If no fences are present, DO NOT delete unique manual prose. Produce:
+    1) A unified diff that changes only what is necessary.
+    2) An optional "Generated Appendix" at the end for new sections that don't map cleanly onto existing headings.
+- Preserve file-specific items (front-matter, badges, custom anchors).
+- Keep the original heading order when possible; add missing sections after the closest related heading.
+- Be idempotent: re-running Step 2 should produce an empty diff when nothing has changed.
+
+OUTPUT MODE
+- If a file is new → output its full content.
+- If a file exists → output a unified diff (preferred). Only fall back to full-file replacement when the file is mostly generated or the diff would be larger/less clear than a full rewrite.
+
 FILE CONTENT REQUIREMENTS
 
 1) .github/copilot-instructions.md
@@ -180,6 +195,8 @@ FORMAT for each rule file:
 DELIVERABLES — OUTPUT FORMAT
 Return only the files and a short Change Log.
 Each file starts with a header line and then its full contents, e.g.:
+- For updates, include a "## Edits" section with diffs per file. If a file is entirely new, include a "## New Files" section with full contents.
+
 
 # .github/copilot-instructions.md
 <full content>
@@ -220,4 +237,11 @@ Verification Report
 - <bullets>
 
 Edits
-<diffs or full replacements, only for files that changed>
+- Provide unified diffs for all updated existing files (no full replacements unless strictly necessary).
+- Provide full contents only for brand-new files or when a full rewrite is safer/clearer than a long diff.
+
+EXTRA CHECKS (updates)
+- Fenced regions were replaced exactly; non-fenced manual content was preserved verbatim.
+- Headings and anchors that existed before still resolve (no broken links).
+- Re-running Step 2 on the updated files yields no further changes (idempotent).
+
